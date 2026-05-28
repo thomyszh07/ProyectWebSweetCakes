@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <!-- IMAGEN DE FONDO -->
+    <img src="assets/pantalla de inicio de sesion.png" class="fondo" alt="Fondo">
+
+    <div class="login-box">
+        <h1>¡Bienvenid@!</h1>
+        <p>Inicia sesión para continuar</p>
+
+        <a href="Inicio.html">
+            <button>
+                Atras
+            </button>
+        </a>
+
+        <div class="input-group">
+            <label>Correo electrónico</label>
+            <!-- Agregamos id="email" -->
+            <input type="email" id="email" placeholder="Ingresa tu correo">
+        </div>
+
+        <div class="input-group">
+            <label>Contraseña</label>
+            <!-- Agregamos id="password" -->
+            <input type="password" id="password" placeholder="Ingresa tu contraseña">
+        </div>
+
+        <button type="button" class="login-btn" onclick="validarLogin()">
+            Iniciar sesión
+        </button>
+
+        <br>
+        <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
+
+        <button class="google-btn">CONTINUAR CON GOOGLE</button>
+    </div>
+
+    <script>
+        function validarLogin() {
+            // Obtenemos los valores de los inputs
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+
+            // Condición: Si ambos campos tienen algo (no están vacíos)
+            if (email !== "" && pass !== "") {
+                window.location.href = "Inicio_Registrado.html"; // Redirige
+            } else {
+                alert("Por favor, completa ambos campos para continuar.");
+            }
+        }
+    </script>
+
+</body>
+</html>
