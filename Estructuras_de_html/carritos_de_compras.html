@@ -1,0 +1,142 @@
+<!-- Código estructurado basado en el diseño de image_3295f6.png -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Carrito de Compras</title>
+</head>
+<body>
+
+    <!-- Menú de navegación superior -->
+    <table border="0">
+        <tr>
+            <td><button type="button">Inicio</button></td>
+            <td><button type="button">Menú</button></td>
+            <td><button type="button">Tu Carrito</button></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- Contenedor principal de dos columnas usando tablas HTML nativas -->
+    <table border="0" width="100%" cellspacing="10">
+        <tr>
+            <!-- Columna Izquierda: Carrito de Compras -->
+            <td valign="top" width="70%">
+                
+                <h2>Tu Carrito de Compras</h2>
+
+                <!-- Tabla del carrito -->
+                <table border="1" width="100%" cellpadding="10" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th align="left">Productos</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="image_3295f6.png" alt="Pie Limón" width="60" height="45">
+                                <strong>Pie Limón</strong> - <small>Grupal - Postre clásico</small>
+                                <button type="button">Eliminar</button>
+                            </td>
+                            <td align="center">$68.00</td>
+                            <td align="center">
+                                <button type="button">-</button> 1 <button type="button">+</button>
+                            </td>
+                            <td align="center">$68.00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="image_3295f6.png" alt="Selva Negra" width="60" height="45">
+                                <strong>Selva Negra</strong> - <small>Individual - Postre típico</small>
+                                <button type="button">Eliminar</button>
+                            </td>
+                            <td align="center">$6.00</td>
+                            <td align="center">
+                                <button type="button">-</button> 4 <button type="button">+</button>
+                            </td>
+                            <td align="center">$24.00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="image_3295f6.png" alt="Torta Helada" width="60" height="45">
+                                <strong>Torta Helada</strong> - <small>Individual</small>
+                                <button type="button">Eliminar</button>
+                            </td>
+                            <td align="center">$6.00</td>
+                            <td align="center">
+                                <button type="button">-</button> 2 <button type="button">+</button>
+                            </td>
+                            <td align="center">$12.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+
+                <!-- Sección de recomendados -->
+                <table border="1" width="100%" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td>
+                            <strong>Productos recomendados para ti</strong>
+                            <br><br>
+                            <table border="0" cellspacing="10">
+                                <tr>
+                                    <td align="center">
+                                        <img src="image_3295f6.png" alt="Tornado" width="60" height="45"><br>
+                                        <small>Tornado</small>
+                                    </td>
+                                    <td align="center">
+                                        <img src="image_3295f6.png" alt="Pie Maracuyá" width="60" height="45"><br>
+                                        <small>Pie Maracuyá</small>
+                                    </td>
+                                    <td align="center">
+                                        <img src="image_3295f6.png" alt="Alfajores" width="60" height="45"><br>
+                                        <small>Alfajores</small>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+
+            <!-- Columna Derecha: Resumen del Pedido -->
+            <td valign="top" width="30%">
+                
+                <table border="1" width="100%" cellpadding="15" cellspacing="0">
+                    <tr>
+                        <td>
+                            <h3 align="center">Resumen del Pedido</h3>
+                            <hr>
+                            <p>Subtotal Items (7): <strong>$104.00</strong></p>
+                            <p>Envío estimado: <strong>$5.00</strong></p>
+                            <p>Descuento: <strong>-$0.00</strong></p>
+                            <hr>
+                            <p><strong>Total: $109.00</strong></p>
+                            <br>
+                            <label>Cupón de descuento</label><br>
+                            <input type="text" placeholder="Ingresa tu código...">
+                            <button type="button">Aplicar</button>
+                            <br><br>
+                            <p align="center">
+                                <button type="button">Proceder al Pago</button>
+                            </p>
+                            <p align="center">
+                                <button type="button">Seguir Comprando</button>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
