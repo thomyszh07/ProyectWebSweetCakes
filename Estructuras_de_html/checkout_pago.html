@@ -3,126 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <title>Finalizar Pedido - Simplificado</title>
+    <script>
+        function procesarPago(event) {
+            event.preventDefault();
+            document.getElementById('checkout-principal').style.display = 'none';
+            document.getElementById('pantalla-gracias').style.display = 'block';
+        }
+    </script>
 </head>
 <body bgcolor="#ffffff" style="font-family:sans-serif;">
 
-    <table border="1" cellpadding="6" cellspacing="0">
-        <tr>
-            <td bgcolor="#f5b0a7"><b>Inicio</b></td>
-            <td bgcolor="#f5b0a7"><b>Menú</b></td>
-            <td bgcolor="#f5b0a7"><b>Tu Carrito</b></td>
-            <td bgcolor="#8cb4f5"><b>Checkout</b></td>
-        </tr>
-    </table>
-    
-    <h1>📋 Finalizar Pedido</h1>
+    <div id="checkout-principal">
+        <table border="1" cellpadding="6" cellspacing="0">
+            <tr>
+                <td bgcolor="#f5b0a7"><b><a href="inicio.html" style="text-decoration:none; color:black;">Inicio</a></b></td>
+                <td bgcolor="#f5b0a7"><b>Menú</b></td>
+                <td bgcolor="#f5b0a7"><b>Tu Carrito</b></td>
+                <td bgcolor="#8cb4f5"><b>Checkout</b></td>
+            </tr>
+        </table>
+        
+        <h1>📋 Finalizar Pedido</h1>
 
-    <table border="0" width="100%" cellpadding="10" cellspacing="0">
-        <tr>
-            <td width="70%" valign="top">
+        <form onsubmit="procesarPago(event)">
+            <table border="0" width="100%" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td width="70%" valign="top">
 
-                <table border="2" width="100%" cellpadding="8" cellspacing="0">
-                    <tr><td colspan="2"><h2>Datos de Contacto</h2><hr size="1" color="#000"></td></tr>
-                    <tr>
-                        <td><b>NOMBRE</b><br><input type="text" value="nombre" style="width:95%"></td>
-                        <td><b>APELLIDO</b><br><input type="text" value="apellido" style="width:95%"></td>
-                    </tr>
-                    <tr>
-                        <td><b>CORREO ELECTRÓNICO</b><br><input type="text" value="Correo@ejemplo.com" style="width:95%"></td>
-                        <td><b>TELÉFONO / WHATSAPP</b><br><input type="text" value="+51 999 999 999" style="width:95%"></td>
-                    </tr>
-                </table><br>
+                        <table border="2" width="100%" cellpadding="8" cellspacing="0">
+                            <tr><td colspan="2"><h2>Datos de Contacto</h2><hr size="1" color="#000"></td></tr>
+                            <tr>
+                                <td><b>NOMBRE</b><br><input type="text" value="nombre" style="width:95%"></td>
+                                <td><b>APELLIDO</b><br><input type="text" value="apellido" style="width:95%"></td>
+                            </tr>
+                            <tr>
+                                <td><b>CORREREO ELECTRÓNICO</b><br><input type="text" value="Correo@ejemplo.com" style="width:95%"></td>
+                                <td><b>TELÉFONO / WHATSAPP</b><br><input type="text" value="+51 999 999 999" style="width:95%"></td>
+                            </tr>
+                        </table><br>
 
-                <table border="2" width="100%" cellpadding="8" cellspacing="0">
-                    <tr><td colspan="2"><h2>Dirección de Entrega</h2><hr size="1" color="#000"></td></tr>
-                    <tr><td colspan="2"><b>DIRECCIÓN</b><br><input type="text" value="Av. " style="width:98%"></td></tr>
-                    <tr>
-                        <td><b>DISTRITO</b><br><input type="text" value="distrito" style="width:95%"></td>
-                        <td><b>REFERENCIA</b><br><input type="text" value="Cerca a..." style="width:95%"></td>
-                    </tr>
-                    <tr>
-                        <td><b>FECHA DE ENTREGA</b><br><input type="date" value="2026-06-04"></td>
-                        <td>
-                            <b>TURNO DE ENTREGA</b>
-                            <table border="1" cellpadding="2" cellspacing="0" width="100%">
-                                <tr><td>Mañana (9 am - 12 pm) <span style="float:right">▼</span></td></tr>
-                                <tr bgcolor="#eee"><td><small>Tarde (12 pm - 6 pm)</small></td></tr>
-                                <tr bgcolor="#eee"><td><small>Noche (6 pm - 9 pm)</small></td></tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr><td colspan="2"><b>NOTA OPCIONAL</b><br><input type="text" value="Tocar timbre..." style="width:98%"></td></tr>
-                </table><br>
+                        <table border="2" width="100%" cellpadding="8" cellspacing="0">
+                            <tr><td colspan="2"><h2>Dirección de Entrega</h2><hr size="1" color="#000"></td></tr>
+                            <tr><td colspan="2"><b>DIRECCIÓN</b><br><input type="text" value="Av. " style="width:98%"></td></tr>
+                            <tr>
+                                <td><b>DISTRITO</b><br><input type="text" value="distrito" style="width:95%"></td>
+                                <td><b>REFERENCIA</b><br><input type="text" value="Cerca a..." style="width:95%"></td>
+                            </tr>
+                            <tr>
+                                <td><b>FECHA DE ENTREGA</b><br><input type="date" value="2026-06-04"></td>
+                                <td>
+                                    <b>TURNO DE ENTREGA</b>
+                                    <table border="1" cellpadding="2" cellspacing="0" width="100%">
+                                        <tr><td>Mañana (9 am - 12 pm) <span style="float:right">▼</span></td></tr>
+                                        <tr bgcolor="#eee"><td><small>Tarde (12 pm - 6 pm)</small></td></tr>
+                                        <tr bgcolor="#eee"><td><small>Noche (6 pm - 9 pm)</small></td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td colspan="2"><b>NOTA OPCIONAL</b><br><input type="text" value="Tocar timbre..." style="width:98%"></td></tr>
+                        </table><br>
 
-                <table border="2" width="100%" cellpadding="8" cellspacing="0">
-                    <tr><td><h2>Método de Pago</h2><hr size="1" color="#000"></td></tr>
-                    <tr><td><table border="1" width="100%" cellpadding="6"><tr><td width="20" bgcolor="#00b4c4"></td><td><b>Plin</b> - Transferencia instantánea</td></tr></table></td></tr>
-                    <tr><td><table border="1" width="100%" cellpadding="6"><tr><td width="20" bgcolor="#742474"></td><td><b>Yape</b> - Pago con QR o número</td></tr></table></td></tr>
-                    <tr>
-                        <td align="center">
-                            <b>Escanea el código o transfiere</b><br><br>
-                            <table border="0" cellpadding="10">
-                                <tr>
-                                    <td align="center">
-                                        <table border="1" cellspacing="1" cellpadding="4">
-                                            <tr><td bgcolor="#742474"></td><td></td><td bgcolor="#742474"></td></tr>
-                                            <tr><td></td><td bgcolor="#742474"></td><td></td></tr>
-                                            <tr><td bgcolor="#742474"></td><td></td><td bgcolor="#742474"></td></tr>
-                                        </table><br>
-                                        <small><b>999-999-999</b><br>Yape - Sweet Cakes</small>
-                                    </td>
-                                    <td width="40"><b>|</b></td>
-                                    <td align="center">
-                                        <table border="1" cellspacing="1" cellpadding="4">
-                                            <tr><td></td><td bgcolor="#00b4c4"></td><td></td></tr>
-                                            <tr><td bgcolor="#00b4c4"></td><td></td><td bgcolor="#00b4c4"></td></tr>
-                                            <tr><td></td><td bgcolor="#00b4c4"></td><td></td></tr>
-                                        </table><br>
-                                        <small><b>999-999-999</b><br>Plin - Sweet Cakes</small>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table><br>
+                        <table border="2" width="100%" cellpadding="8" cellspacing="0">
+                            <tr><td><h2>Método de Pago</h2><hr size="1" color="#000"></td></tr>
+                            <tr><td><table border="1" width="100%" cellpadding="6"><tr><td width="20" bgcolor="#00b4c4"></td><td><b>Plin</b> - Transferencia instantánea</td></tr></table></td></tr>
+                            <tr><td><table border="1" width="100%" cellpadding="6"><tr><td width="20" bgcolor="#742474"></td><td><b>Yape</b> - Pago con QR o número</td></tr></table></td></tr>
+                            <tr>
+                                <td align="center">
+                                    <b>Escanea el código o transfiere</b><br><br>
+                                    <table border="0" cellpadding="10">
+                                        <tr>
+                                            <td align="center">
+                                                <table border="1" cellspacing="1" cellpadding="4">
+                                                    <tr><td bgcolor="#742474"></td><td></td><td bgcolor="#742474"></td></tr>
+                                                    <tr><td></td><td bgcolor="#742474"></td><td></td></tr>
+                                                    <tr><td bgcolor="#742474"></td><td></td><td bgcolor="#742474"></td></tr>
+                                                </table><br>
+                                                <small><b>999-999-999</b><br>Yape - Sweet Cakes</small>
+                                            </td>
+                                            <td width="40"><b>|</b></td>
+                                            <td align="center">
+                                                <table border="1" cellspacing="1" cellpadding="4">
+                                                    <tr><td></td><td bgcolor="#00b4c4"></td><td></td></tr>
+                                                    <tr><td bgcolor="#00b4c4"></td><td></td><td bgcolor="#00b4c4"></td></tr>
+                                                    <tr><td></td><td bgcolor="#00b4c4"></td><td></td></tr>
+                                                </table><br>
+                                                <small><b>999-999-999</b><br>Plin - Sweet Cakes</small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table><br>
 
-                <table border="2" width="100%" cellpadding="8" cellspacing="0">
-                    <tr><td><h2>Confirmación legal</h2><hr size="1" color="#000"></td></tr>
-                    <tr><td><input type="checkbox" checked> Acepto <a href="#">Términos y Condiciones</a></td></tr>
-                    <tr><td><input type="checkbox" checked> He leído el <a href="#">Libro de Reclamaciones</a></td></tr>
-                    <tr><td><input type="checkbox"> Quiero recibir ofertas</td></tr>
-                    <tr>
-                        <td align="center"><br>
-                            <input type="submit" value=" Confirmar y Pagar - $109.00 " style="padding:5px 20px;"><br><br>
-                            <input type="button" value=" Volver al Carrito " style="padding:5px 20px;">
-                        </td>
-                    </tr>
-                </table>
+                        <table border="2" width="100%" cellpadding="8" cellspacing="0">
+                            <tr><td><h2>Confirmación legal</h2><hr size="1" color="#000"></td></tr>
+                            <tr><td><input type="checkbox" checked> Acepto <a href="#">Términos y Condiciones</a></td></tr>
+                            <tr><td><input type="checkbox" checked> He leído el <a href="#">Libro de Reclamaciones</a></td></tr>
+                            <tr><td><input type="checkbox"> Quiero recibir ofertas</td></tr>
+                            <tr>
+                                <td align="center"><br>
+                                    <input type="submit" value=" Confirmar y Pagar - $109.00 " style="padding:5px 20px;"><br><br>
+                                    <input type="button" value=" Volver al Carrito " style="padding:5px 20px;" onclick="window.location.href='inicio.html';">
+                                </td>
+                            </tr>
+                        </table>
 
-            </td>
+                    </td>
 
-            <td width="30%" valign="top">
-                <table border="2" width="100%" cellpadding="10" cellspacing="0">
-                    <tr><td align="center"><h3>Tu Pedido</h3><hr size="2" color="#000"></td></tr>
-                    <tr>
-                        <td>
-                            <table border="0" width="100%" cellpadding="4">
-                                <tr><td>Postre x1</td><td align="right"><u>$00.00</u></td></tr>
-                                <tr><td>Postre x4</td><td align="right"><u>$0.00</u></td></tr>
-                                <tr><td>Postre x2</td><td align="right"><u>$0.00</u></td></tr>
-                                <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
-                                <tr><td>Subtotal</td><td align="right"><b><font color="#c44d4d">$00.00</font></b></td></tr>
-                                <tr><td>Envío</td><td align="right"><b><font color="#c44d4d">$0.00</font></b></td></tr>
-                                <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
-                                <tr><td><b>Total</b></td><td align="right"><b><font color="#c44d4d">$00.00</font></b></td></tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr><td align="center"><br><small>@SweetCakes</small></td></tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                    <td width="30%" valign="top">
+                        <table border="2" width="100%" cellpadding="10" cellspacing="0">
+                            <tr><td align="center"><h3>Tu Pedido</h3><hr size="2" color="#000"></td></tr>
+                            <tr>
+                                <td>
+                                    <table border="0" width="100%" cellpadding="4">
+                                        <tr><td>Postre x1</td><td align="right"><u>$35.00</u></td></tr>
+                                        <tr><td>Postre x4</td><td align="right"><u>$44.00</u></td></tr>
+                                        <tr><td>Postre x2</td><td align="right"><u>$20.00</u></td></tr>
+                                        <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
+                                        <tr><td>Subtotal</td><td align="right"><b><font color="#c44d4d">$99.00</font></b></td></tr>
+                                        <tr><td>Envío</td><td align="right"><b><font color="#c44d4d">$10.00</font></b></td></tr>
+                                        <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
+                                        <tr><td><b>Total</b></td><td align="right"><b><font color="#c44d4d">$109.00</font></b></td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td align="center"><br><small>@SweetCakes</small></td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="pantalla-gracias" style="display: none; padding: 20px;">
+        <table border="0" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <h1 style="font-size: 50px; color: #4CAF50; margin-bottom: 5px;">🎉 ¡GRACIAS POR TU COMPRA! 🎉</h1>
+                    <h3>Tu pedido en <b>Sweet Cakes</b> ha sido procesado con éxito.</h3>
+                    <p>En breve nos comunicaremos contigo por WhatsApp para coordinar la entrega.</p>
+                    <hr size="2" color="#eee" width="60%"><br>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <table border="2" cellpadding="15" cellspacing="0" width="50%" bgcolor="#f9f9f9">
+                        <tr>
+                            <td bgcolor="#8cb4f5" align="center"><b>📋 RESUMEN DE TU COMPRA</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="0" width="100%" cellpadding="6">
+                                    <tr><td>🍰 Postre x1</td><td align="right">$35.00</td></tr>
+                                    <tr><td>🧁 Postre x4</td><td align="right">$44.00</td></tr>
+                                    <tr><td>🍩 Postre x2</td><td align="right">$20.00</td></tr>
+                                    <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
+                                    <tr><td><b>Subtotal</b></td><td align="right">$99.00</td></tr>
+                                    <tr><td><b>Envío</b></td><td align="right">$10.00</td></tr>
+                                    <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
+                                    <tr><td><font size="4"><b>Total Pagado:</b></font></td><td align="right"><font size="4" color="#c44d4d"><b>$109.00</b></font></td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#eee">
+                                <small><b>Código de operación simulado:</b> #SC-2026-9481</small>
+                            </td>
+                        </tr>
+                    </table>
+                    <br><br>
+                    <input type="button" value=" Volver a la Tienda " style="padding:10px 30px; font-weight:bold;" onclick="window.location.href='inicio.html';">
+                </td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
