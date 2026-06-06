@@ -1,0 +1,86 @@
+:root{
+    --color-principal:hsl(338, 100%, 96%);
+    --color-secundario:#f1d9ff;
+    --color-boton:#e76b9b;
+}
+body {
+    background-color: var(--color-principal);
+}
+/* --- CONFIGURACIÓN DE LA PÁGINA --- */
+body.carta {
+    background-color: #f3e9dc; /* El color de fondo crema de tu imagen */
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    margin: 0;}
+
+body.carta h1 {
+    color: #000000; 
+    text-align: center;
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Posición y diseño del buscador redondeado */
+.contenedor-busqueda {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.contenedor-busqueda input {
+    padding: 8px 15px;
+    border: 1.5px solid #000000;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 160px;
+    outline: none;
+    background-color: white;
+}
+
+/* --- LA REJILLA DE PRODUCTOS (CSS GRID) --- */
+.cuadricula-postres {
+    display: grid;
+    /* Divide la pantalla en columnas automáticas que se adaptan solas */
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 40px 30px; /* Separación vertical y horizontal entre cuadros */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+/* --- DISEÑO DE CADA CUADRO VERDE DE POSTRE --- */
+.tarjeta-postre {
+    background-color: #a8d5ba;       /* El color verde pastel exacto */
+    border: 1.5px solid #000000;     /* El borde negro del dibujo */
+    display: flex;
+    flex-direction: column;          /* Ordena el contenido hacia abajo */
+    box-sizing: border-box;
+}
+
+/* Nombre de la torta (Texto de arriba) */
+.nombre-postre {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Fotos cuadradas perfectas con líneas negras divisorias */
+.tarjeta-postre img {
+    width: 100%;
+    height: 160px;                   /* Mantiene todas las fotos alineadas */
+    object-fit: cover;               /* Evita que las imágenes se distorsionen */
+    border-top: 1.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+}
+
+/* Precio (Texto de abajo) */
+.precio-postre {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    padding: 8px;
+    text-align: center;              /* Centrado tal cual tu boceto */
+}

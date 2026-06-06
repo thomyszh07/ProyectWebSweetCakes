@@ -1,79 +1,85 @@
-<!DOCTYPE html>  <!--Sirve para decirle al navegador que el documento está escrito en HTML5.-->
-<html lang="es"> <!--indica que el idioma de la página es español.-->
-<head> <!--Abre la sección de configuración de la página HTML se puede poner titulos enlaces estilos etc-->
-    <meta charset="UTF-8"> <!--Indica la codificación de caracteres del documento HTM. UTF-8, que soporta casi todos los idiomas.-->
-    <title>Postres dulces</title>  <!--titulo de la pagina o pestaña-->
-</head> <!--cierra head-->
-<body>  <!--Es la parte del HTML donde va todo el contenido visible de la página.-->
+<!DOCTYPE html>  
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Postres dulces</title>  
+    <link rel="stylesheet" href="../css/stylep.css">
+</head> 
+<body class="carta">  
 
-   
-    <h1>POSTRES DULCES</h1>  <!--titulo de encabezado-->
-     <input type="text" placeholder="Search">  <!--Esto crea un campo de texto donde el usuario puede escribir.  tpo texto-->
+    <h1>CARTA DE POSTRES DULCE</h1>  
+    
+    <!-- Contenedor para el buscador redondeado de la esquina -->
+    <div class="contenedor-busqueda">
+        <input type="text" placeholder="Q search">
+    </div>
 
-
-    <div>  <!--Sirve para agrupar elementos (texto, imágenes, botones, etc.-->
+    <!-- Contenedor principal de la cuadrícula -->
+    <div class="cuadricula-postres">  
         
-        <div>
-            <span>TORTA DE CHOCOLATE</span> <!--es un contenedor en línea (inline) Sirve para marcar o estilizar una parte pequeña de texto.-->
-            <img src="../Assets/Banners/Img_postres_dulces/tortacgococlate.png" alt="TORTAS">
-             <span>$34.00</span>
-        </div>
-        <div>
-            <span>TORTA DE MARACUYA</span>
-            <img src="../Assets/Banners/Img_postres_dulces/pastelmaracuya.png" alt="TORTAS">
-             <span>$38.00</span>
-        </div>
-        <div>
-            <span>PIE DE LIMÓN</span>
-            <img src="../Assets/Banners/Img_postres_dulces/pie de limon.png" alt="PIE">
-             <span>$40,00</span>
-        </div>
-        <br>
-
-        <div>
-            <span>CHEESCAKE DE FRUTOS</span>
-            <img src="../Assets/Banners/Img_postres_dulces/cheescake.png" alt="CHEESCAKE">
-            <span>$39.00</span>
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">TORTA DE CHOCOLATE</div> 
+            <img src="../Assets/Banners/Img_postres_dulces/tortacgococlate.png" alt="TORTA DE CHOCOLATE">
+            <div class="precio-postre">$34.00</div>
         </div>
 
-        <div>
-            <span>KEKE DE NARANJA</span>
-            <img src="../Assets/Banners/Img_postres_dulces/keke.png" alt="KEKE">
-            <span>$29.00</span>
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">TORTA DE MARACUYA</div>
+            <img src="../Assets/Banners/Img_postres_dulces/pastelmaracuya.png" alt="TORTA DE MARACUYA">
+            <div class="precio-postre">$38.00</div>
         </div>
 
-        <div>
-            <span>TORTA HELADA</span>
-            <img src="../Assets/Banners/Img_postres_dulces/tortahelada.png" alt="Croissants">
-            <span>$34.00</span>
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">PIE DE LIMÓN</div>
+            <img src="../Assets/Banners/Img_postres_dulces/pie de limon.png" alt="PIE DE LIMÓN">
+            <div class="precio-postre">$40.00</div>
         </div>
 
-        <div>
-            <span>TORTAS TRES LECHES</span>
-            <img src="../Assets/Banners/Img_postres_dulces/tortatresleches.png" alt="GELATINA">
-            <span>$34.00</span>
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">CHEESCAKE DE FRUTOS</div>
+            <img src="../Assets/Banners/Img_postres_dulces/cheescake.png" alt="CHEESCAKE DE FRUTOS">
+            <div class="precio-postre">$39.00</div>
         </div>
 
-        <div>
-            <span>TRUFAS</span>
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">KEKE DE NARANJA</div>
+            <img src="../Assets/Banners/Img_postres_dulces/keke.png" alt="KEKE DE NARANJA">
+            <div class="precio-postre">$29.00</div>
+        </div>
+
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">TORTA HELADA</div>
+            <img src="../Assets/Banners/Img_postres_dulces/tortahelada.png" alt="TORTA HELADA">
+            <div class="precio-postre">$34.00</div>
+        </div>
+
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">TORTAS TRES LECHES</div>
+            <img src="../Assets/Banners/Img_postres_dulces/tortatresleches.png" alt="TORTAS TRES LECHES">
+            <div class="precio-postre">$34.00</div>
+        </div>
+
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">TRUFAS</div>
             <img src="../Assets/Banners/Img_postres_dulces/trufas.png" alt="TRUFAS">
-            <span>$34.00</span>
+            <div class="precio-postre">$34.00</div>
         </div>
 
-        <div>
-            <span>PIONONO</span>
-            <img src="../Assets/Banners/Img_postres_dulces/pionono.png" alt="Bocaditos">
-             <span>$27.00</span>
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">PIONONO</div>
+            <img src="../Assets/Banners/Img_postres_dulces/pionono.png" alt="PIONONO">
+            <div class="precio-postre">$27.00</div>
         </div>
 
-        <div>
-            <span>mini DUPLA </span>
-            <img src="../Assets/Banners/Img_postres_dulces/dupla dulce.png" alt="postres">
-             <span>$22.00</span>
+        <div class="tarjeta-postre">
+            <div class="nombre-postre">MINI DUPLA</div>
+            <img src="../Assets/Banners/Img_postres_dulces/dupla dulce.png" alt="MINI DUPLA">
+            <div class="precio-postre">$22.00</div>
         </div>
 
     </div>
 
+    <!-- Tu botón volver al final -->
     <nav>
         <a href="Inicio_Registrado.html">
             <button type="button">VOLVER</button>
