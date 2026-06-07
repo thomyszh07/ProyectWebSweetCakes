@@ -1,5 +1,5 @@
 :root {
-    --color-principal: hsl(338, 100%, 96%);
+    --color-principal: hsl(0, 0%, 98%);
     --color-secundario: #f1d9ff;
     --color-boton: #e76b9b;
 }
@@ -81,3 +81,12 @@ body.carta h1 {
     padding: 10px;
     text-align: center; /* Devuelve el precio al centro exacto */
 }
+button, input[type="submit"] {
+    background-color:var(--color-boton) !important; /*  */
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    padding: 4.5px 45px;
+    cursor: pointer;
+    color: #000000; 
+}
+
