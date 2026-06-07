@@ -7,13 +7,19 @@
 </head>
 <body id="pagina-datos">
 
+    <!-- Botón Atrás -->
+    <div class="navegacion-superior">
+        <button type="button" onclick="history.back()" class="btn-atras">
+            &larr; Volver
+        </button>
+    </div>
+
     <div class="encabezado-perfil">
         <img src="../Assets/Banners/imagenes_usuario/usuario.png" alt="Icono Perfil de Usuario">
         <h2>DATOS PERSONALES</h2>
     </div>
 
     <form>
-        
         <div> 
             <label>NOMBRE :</label>
             <input type="text">
@@ -39,15 +45,14 @@
         </div>
 
         <br>
-    <a href="Inicio.html">
-        <button type="button">
-            <img src="../Assets/Banners/imagenes_usuario/salida-de-emergencia.png" alt="CERRAR">CERRAR SESION
-        </button>
-    </a>
-    </div>
-
+        
+        <a href="Inicio.html">
+            <button type="button">
+                <img src="../Assets/Banners/imagenes_usuario/salida-de-emergencia.png" alt="CERRAR">CERRAR SESION
+            </button>
+        </a>
     </form>
     <br>
 
 </body>
-</html> 
+</html>

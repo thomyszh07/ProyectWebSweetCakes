@@ -84,6 +84,11 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
+    margin: 15px;
+}
+
+#lettertitle {
+    font-family: var(--fuente-titulo);
 }
 
 nav {
