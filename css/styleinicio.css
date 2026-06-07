@@ -1,0 +1,242 @@
+/* ============================================================
+    VARIABLES GLOBALES (paleta y tipografía centralizada)
+   ============================================================ */
+:root {
+    /* Colores principales */
+    --color-fondo:       #fff8f9;   /* Blanco con tinte rosado muy suave */
+    --color-crema:       #fdf0e0;   /* Crema cálida para secciones alternas */
+    --color-rosa-claro:  #ffd6df;   /* Rosa pastel para bordes y fondos suaves */
+    --color-rosa-medio:  #f4a0b5;   /* Rosa medio para detalles y hover */
+    --color-cereza:      #c0395a;   /* Color principal de acento (botones, links) */
+    --color-cereza-dark: #8e1e3b;   /* Cereza oscuro para hover en botones */
+    --color-texto:       #3b1f26;   /* Marrón muy oscuro para texto legible */
+    --color-texto-suave: #7a5260;   /* Tono suave para subtítulos y etiquetas */
+    --color-blanco:      #ffffff;
+
+    /* Sombras */
+    --sombra-card:  0 6px 24px rgba(192, 57, 90, 0.10);
+    --sombra-hover: 0 12px 36px rgba(192, 57, 90, 0.20);
+
+    /* Bordes redondeados */
+    --radio-card:   18px;
+    --radio-btn:    40px;
+    --radio-input:  12px;
+
+    /* Tipografía */
+    --fuente-titulo: 'Playfair Display', Georgia, serif;
+    --fuente-cuerpo: 'Lato', 'Segoe UI', sans-serif;
+
+    /* Espaciado base */
+    --espacio-seccion: 60px;
+    --espacio-card:    20px;
+}
+
+
+/* ============================================================
+    RESET Y BASE GLOBAL
+   ============================================================ */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;       /* Scroll suave para links internos */
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--fuente-cuerpo);
+    border: none;
+}
+
+
+/* ============================================================
+    ENCABEZADO Y NAVEGACIÓN (compartido por todas las páginas)
+   ============================================================ */
+header {
+    background-color: var(--color-blanco);
+    padding: 0 2rem;
+    box-shadow: 0 2px 16px rgba(192, 57, 90, 0.08);
+    position: sticky;              /* Se queda fijo al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo o nombre de la tienda dentro del nav */
+.nav-logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-cereza);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Grupo de links de navegación */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto-suave);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: var(--radio-btn);
+    transition: background-color 0.25s, color 0.25s;
+}
+
+nav a:hover {
+    background-color: var(--color-rosa-claro);
+    color: var(--color-cereza);
+}
+
+/* Link activo (añade class="activo" al link de la página actual) */
+nav a.activo {
+    background-color: var(--color-cereza);
+    color: var(--color-blanco);
+}
+
+/* Buscador en el nav */
+nav input[type="text"] {
+    padding: 8px 18px;
+    border: 1.5px solid var(--color-rosa-claro);
+    border-radius: var(--radio-btn);
+    outline: none;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.85rem;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    width: 200px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+nav input[type="text"]:focus {
+    border-color: var(--color-rosa-medio);
+    box-shadow: 0 0 0 3px rgba(244, 160, 181, 0.20);
+}
+
+nav input[type="text"]::placeholder {
+    color: var(--color-rosa-medio);
+}
+
+
+
+/* ============================================================
+     PÁGINA DE INICIO — Banners / imágenes
+   ============================================================ */
+
+/* Contenedor de los banners principales */
+.banners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espacio-card);
+    padding: var(--espacio-seccion) 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Cada imagen de banner */
+.banners-grid img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--radio-card);
+    box-shadow: var(--sombra-card);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.banners-grid img:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: var(--sombra-hover);
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    text-align: center;
+    padding: 50px 20px 10px;
+}
+
+.bienvenida h1 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(2rem, 5vw, 3.5rem); 
+    color: var(--color-cereza);
+    margin-bottom: 10px;
+}
+
+.bienvenida p {
+    font-size: 1.05rem;
+    color: var(--color-texto-suave);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+     PIE DE PÁGINA
+   ============================================================ */
+
+/* 1. Aseguramos que el body sea un contenedor flex para empujar el footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0;
+}
+
+/* 2. El footer ahora se pegará al fondo */
+.footer {
+    text-align: center;
+    background-color: var(--color-texto); /* Color rosa pastel */
+    color: var(--color-rosa-claro);            /* Color marrón chocolate */
+    padding: 20px 0;          /* Espaciado interno arriba y abajo */
+    width: 100%;
+    margin-top: auto;          /* ¡ESTA ES LA CLAVE! Empuja el footer al final */
+}
+
+/* 3. Eliminamos el margen del párrafo interno que causaba el hueco */
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+}

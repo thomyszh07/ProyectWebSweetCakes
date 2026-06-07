@@ -3,36 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Cakes</title>
-    <link rel="stylesheet" href="../css/stylep.css">
+    <title>Sweet Cakes — Inicio</title>
+    <!-- Hoja de estilos principal (ajusta la ruta si el archivo HTML está en otra carpeta) -->
+    <link rel="stylesheet" href="../css/styleinicio.css">
 </head>
 
-<body class="inicio-registrado">
+<body>
 
+    <!-- ====== ENCABEZADO CON NAVEGACIÓN ====== -->
     <header>
         <nav>
+            <!-- Logo / nombre de la tienda -->
+            <span class="nav-logo">🍰 Sweet Cakes</span>
 
-            <input type="text" placeholder="Buscar...">
+            <!-- Campo de búsqueda -->
+            <input type="text" placeholder="Buscar postres...">
 
-            <a href="inicio_de_sesion.html">INICIAR SESIÓN</a>
-            <a href="Carta_Salada.html">VER CARTA SALADA</a>
-            <a href="Carta_Dulce.html">VER CARTA DULCE</a>
-            <a href="Campañas.html">CAMPAÑAS POR TEMPORADA</a>
-            <a href="Contactos.html">CONTÁCTANOS</a>
-
+            <!-- Links de navegación -->
+            <div class="nav-links">
+                <a href="inicio_de_sesion.html">Inicio Sesión</a> 
+                <a href="Carta_Salada.html">Carta Salada</a> 
+                <a href="Carta_Dulce.html">Carta Dulce</a>
+                <a href="contactos.html">Contáctanos</a>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <!-- ====== SECCIÓN DE BIENVENIDA ====== -->
+    <section class="bienvenida">
+        <h1>Bienvenidos a Sweet Cakes</h1>
+        <div class="separador"></div>
+        <p>Postres artesanales hechos con amor, listos para endulzar tu día.</p>
+    </section>
 
-        <!-- Usa nombres simples para evitar errores -->
-        <img src="../Assets/Banners/Banners/sweet cakes.jpeg" alt="Postre Sweet Cakes 1" width="500px">
-
-        <img src="../Assets/Banners/Banners/sweet cakes 2.jpeg" alt="Postre Sweet Cakes 2" width="500px">
-
-        <img src="../Assets/Banners/Banners/postres.png"alt="Postre Sweet" width="500px">
-
+    <!-- ====== BANNERS PRINCIPALES ====== -->
+    <!-- Se muestran como grilla de 3 columnas en escritorio, 1 en móvil -->
+    <main class="banners-grid">
+        <img src="../Assets/Banners/Banners/sweet cakes.jpeg" alt="Sweet Cakes — Banner 1">
+        <img src="../Assets/Banners/Banners/sweet cakes 2.jpeg" alt="Sweet Cakes — Banner 2">
+        <img src="../Assets/Banners/Banners/postres.png" alt="Sweet Cakes — Postres">
     </main>
+
+    <!-- ====== PIE DE PÁGINA ====== -->
+    <footer class="footer">
+        <p>© 2026 Sweet Cakes · Lima, Perú</p>
+    </footer>
 
 </body>
 </html>
