@@ -85,7 +85,7 @@ button, input[type="submit"] {
     background-color:var(--color-boton) !important; /*  */
     border: 1.5px solid #000000;
     border-radius: 8px;
-    padding: 12px 45px;
+    padding: 4.5px 45px;
     cursor: pointer;
     color: #000000; 
 }
