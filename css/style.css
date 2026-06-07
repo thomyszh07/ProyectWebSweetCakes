@@ -100,9 +100,12 @@ body#pagina-datos {
     width: 120px;           /* Mantiene la alineación pero más junta */
 }
 
-/* 5. Cuadros de texto más delgados y cortos */
+
+/* 5. Cuadros de texto */
 #pagina-datos input {
-    font-size: 30px;        
-    width: 200px;         
-    border: 1px solid #000000;  
+    font-size: 19px;          /* Letra pequeña y legible */
+    padding: 15px 10px;       /* Agrega espacio interno arriba/abajo y a los lados */
+    width: 310px;             /* Mantiene el ancho */
+    border: 1px solid #000000;
+    box-sizing: border-box;   /* Evita que el padding deforme el ancho total */
 }
