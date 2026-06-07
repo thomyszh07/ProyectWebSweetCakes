@@ -3,55 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/stylep.css">
+    <title>Sweet Cakes — Iniciar Sesión</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style-sesion.css">
+    <link rel="stylesheet" href="../css/styleinicio.css">
 </head>
-<body class="inicio-sesion">
+<body>
 
-    <!-- IMAGEN DE FONDO -->
-    <img src="assets/pantalla de inicio de sesion.png" class="fondo" alt="Fondo">
+    <!-- ====== PÁGINA DE LOGIN ====== -->
+    <!-- .pagina-auth centra la caja en toda la pantalla con fondo degradado rosado -->
+    <div class="pagina-auth">
 
-    <div class="login-box">
-        <h1>¡Bienvenid@!</h1>
-        <p>Inicia sesión para continuar</p>
+        <!-- Caja blanca del formulario -->
+        <div class="login-box">
 
-        <a href="Inicio.html">
-            <button>
-                Atras
+            <!-- Botón para volver al inicio -->
+            <a href="Inicio.html" class="btn-atras">← Atrás</a>
+
+            <!-- Título y subtítulo -->
+            <h1>¡Bienvenid@!</h1>
+            <p>Inicia sesión para continuar</p>
+
+            <!-- Campo de correo -->
+            <div class="input-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="Ingresa tu correo">
+            </div>
+
+            <!-- Campo de contraseña -->
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="Ingresa tu contraseña">
+            </div>
+
+            <!-- Botón principal de login (el onclick se conecta al JS que ya tenías) -->
+            <button type="button" class="login-btn" onclick="validarLogin()">
+                Iniciar sesión
             </button>
-        </a>
 
-        <div class="input-group">
-            <label>Correo electrónico</label>
-            <!-- Agregamos id="email" -->
-            <input type="email" id="email" placeholder="Ingresa tu correo">
+            <!-- Link de contraseña olvidada -->
+            <a href="Olvide_Contraseña.html" class="forgot">¿Olvidaste tu contraseña?</a>
+
+            <!-- Botón de Google -->
+            <button type="button" class="google-btn">
+                <!-- Aquí puedes poner el logo de Google como <img> cuando lo tengas -->
+                Continuar con Google
+            </button>
+
         </div>
-
-        <div class="input-group">
-            <label>Contraseña</label>
-            <!-- Agregamos id="password" -->
-            <input type="password" id="password" placeholder="Ingresa tu contraseña">
-        </div>
-
-        <button type="button" class="login-btn" onclick="validarLogin()">
-            Iniciar sesión
-        </button>
-
-        <br>
-        <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
-
-        <button class="google-btn">CONTINUAR CON GOOGLE</button>
     </div>
 
+    <!-- Script de validación (el que ya tenías) -->
     <script>
         function validarLogin() {
-            // Obtenemos los valores de los inputs
             const email = document.getElementById('email').value;
-            const pass = document.getElementById('password').value;
-
-            // Condición: Si ambos campos tienen algo (no están vacíos)
+            const pass  = document.getElementById('password').value;
             if (email !== "" && pass !== "") {
-                window.location.href = "Inicio_Registrado.html"; // Redirige
+                window.location.href = "Inicio_Registrado.html";
             } else {
                 alert("Por favor, completa ambos campos para continuar.");
             }
