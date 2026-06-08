@@ -152,19 +152,6 @@ body#pagina-datos {
     box-sizing: border-box;   
 }
 
-/* Ajuste para el bloque de cambiar contraseña */
-#pagina-datos form div:has(h3) {
-    justify-content: center; 
-    gap: 10px;               
-}
-
-/* Botón de la flechita (>) curvado */
-#pagina-datos form div button {
-    border-radius: 6px;     /* Esquinas curvas para el botón ">" */
-    border: 1px solid #000;
-    padding: 5px 10px;
-}
-
 /* Botón Cerrar Sesión Curvado */
 #pagina-datos form a button {
     display: flex;

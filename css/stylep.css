@@ -11,7 +11,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Configuración de la página de la carta */
 body.carta {
     background-color: #f3e9dc;
     padding: 30px;
@@ -45,7 +44,7 @@ body.carta h1 {
     margin: 0 auto 40px auto;
 }
 
-/* Tarjeta verde de postre con proporciones fijas */
+/* Tarjeta de postre con proporciones fijas */
 .tarjeta-postre {
     background-color:var(--color-fondo);       
     border: 1.5px solid #000000;     
