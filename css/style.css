@@ -12,7 +12,6 @@ body {
 button {
     padding: 15px 25px;
     border-radius: 30px;    /* Esquinas muy redondeadas estilo cápsula */
-    border: 1px solid #ffffff;
     background-color: var(--color-boton);
     cursor: pointer;
 }
@@ -46,6 +45,7 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 }
 /* 3. Agrupa las redes para que los iconos queden alineados a la izquierda entre sí */
 .bloque-redes {
