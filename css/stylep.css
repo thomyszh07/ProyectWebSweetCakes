@@ -90,6 +90,8 @@ button, input[type="submit"] {
     color: #000000; 
 }
 
+
+
 /* --- Estructura Principal --- */
 .pedido-postre {
     background-color: var(--color-fondo);
@@ -100,8 +102,6 @@ button, input[type="submit"] {
 .container-detalle {
     display: flex;
     gap: 40px;
-    background-color: var(--color-tarjeta);
-    border: 2px solid var(--borde-oscuro);
     padding: 30px;
     max-width: 1100px;
     margin: 0 auto;
@@ -129,15 +129,9 @@ button, input[type="submit"] {
     margin: 0;
 }
 .imagen-caja img {
-    width: 70%;
+    width: 100%;
     display: block;
     margin: 0 auto;
-    border: 2px solid var(--borde-oscuro);
-}
-.envio-caja {
-    border: 2px solid var(--borde-oscuro);
-    padding: 12px;
-    font-weight: bold;
 }
 
 /* --- Columna Derecha e Inputs --- */
