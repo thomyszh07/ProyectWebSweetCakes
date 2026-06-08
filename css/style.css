@@ -14,6 +14,7 @@ button {
     border-radius: 30px;    /* Esquinas muy redondeadas estilo cápsula */
     background-color: var(--color-boton);
     cursor: pointer;
+    border: 0;
 }
 
 /* Esto es lo que va a poner la imagen al lado del texto */
