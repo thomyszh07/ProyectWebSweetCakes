@@ -42,7 +42,7 @@
             <button type="button" class="login-btn" onclick="validarLogin()">
                 Iniciar sesión
             </button>
-
+            
             <!-- Botón de Google -->
             <button type="button" class="google-btn">
                 <!-- Aquí puedes poner el logo de Google como <img> cuando lo tengas -->
@@ -52,18 +52,19 @@
         </div>
     </div>
 
-    <!-- Script de validación (el que ya tenías) -->
-    <script>
-        function validarLogin() {
-            const email = document.getElementById('email').value;
-            const pass  = document.getElementById('password').value;
-            if (email !== "" && pass !== "") {
-                window.location.href = "Inicio_Registrado.html";
-            } else {
-                alert("Por favor, completa ambos campos para continuar.");
-            }
+ <!-- Script de validación (el que ya tenías) -->
+ <script>
+    function validarLogin() {
+        const email = document.getElementById('email').value;
+        const pass  = document.getElementById('password').value;
+        if (email !== "" && pass !== "") {
+            window.location.href = "Inicio_Registrado.html";
+        } else {
+            alert("Por favor, completa ambos campos para continuar.");
         }
-    </script>
+    }
+</script>
+
 
 </body>
 </html>
