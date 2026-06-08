@@ -63,6 +63,9 @@ button {
     gap: 12px;
     margin-bottom: 12px;
 }
+
+
+
 /* Quita los bordes blancos de la pantalla y centra el contenido hacia abajo */
 body {
     margin: 0;
