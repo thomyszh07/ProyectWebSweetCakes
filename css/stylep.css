@@ -185,3 +185,11 @@ button, input[type="submit"] {
     max-width: 420px;
     margin-bottom: 25px;
 }
+.contenedor-tarjeta-visual {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en vertical */
+    align-items: center;    /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente (opcional) */
+    text-align: center;     /* Asegura el centrado del texto */
+    gap: 15px;              /* Controla la separación entre el precio y el botón */
+}
