@@ -10,19 +10,30 @@
             document.getElementById('pantalla-gracias').style.display = 'block';
         }
     </script>
+    <link rel="stylesheet" href="../css/stylem.css">
     <link rel="stylesheet" href="../css/stylep.css">
 </head>
 <body bgcolor="#ffffff" style="font-family:sans-serif;">
 
     <div id="checkout-principal">
-        <table border="1" cellpadding="6" cellspacing="0">
-            <tr>
-                <td bgcolor="#f5b0a7"><b><a href="inicio.html" style="text-decoration:none; color:black;">Inicio</a></b></td>
-                <td bgcolor="#f5b0a7"><b>Menú</b></td>
-                <td bgcolor="#f5b0a7"><b>Tu Carrito</b></td>
-                <td bgcolor="#8cb4f5"><b>Checkout</b></td>
-            </tr>
-        </table>
+       <!-- ====== ENCABEZADO CON NAVEGACIÓN ====== -->
+    <header class="headerbarcarta">
+        <nav>
+            <span class="nav-logo">🍰 Sweet Cakes</span>
+            <div class="nav-links">
+
+                <!-- Campo de búsqueda -->
+            <input type="text" placeholder="Buscar postres...">
+
+                <a href="Inicio_Registrado.html">Inicio</a>
+                <!-- "activo" resalta el link de la página actual -->
+                <a href="carritos_de_compras.html">🛒Carrito</a>
+                <a href="checkout_pago.html" class="activo">Checkout</a>
+            </div>
+        </nav>
+    </header>
+
+
         
         <h1> Finalizar Pedido</h1>
 

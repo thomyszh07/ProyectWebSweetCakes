@@ -6,7 +6,7 @@
 /* Dale enter en la línea 6 y pega esto abajo: */
 
 body {
-    background-color: var(--color-principal); /* Cambiará el fondo de la pantalla al azul claro */
+    background-color: #fff8f9; /* Cambiará el fondo de la pantalla al azul claro */
 }
 
 button {
@@ -81,31 +81,100 @@ h1 {
     box-sizing: border-box;    
 }
 
-/*======DATOS PERSONALES=====*/
-body#pagina-datos {
-    align-items: flex-start; 
-    padding: 25px;          
+/*====== DATOS PERSONALES =====*/
+html, body {
+    height: 100%;           
+    margin: 0;
+    position: relative;     
 }
 
-/* 3. Separación más compacta entre filas */
+body#pagina-datos {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    padding: 25px;          
+    box-sizing: border-box;
+    background-color: #fff5f7; /* Mantiene tu fondo rosa claro sutil */
+}
+
+/* Posiciona la barra de navegación arriba a la izquierda */
+.navegacion-superior {
+    position: absolute;
+    top: 25px;              
+    left: 25px;             
+}
+
+/* Botón Volver Curvado */
+.btn-atras {
+    padding: 15px 25px;
+    border-radius: 30px;    /* Esquinas muy redondeadas estilo cápsula */
+    border: 1px solid #000;
+    background-color: var(--color-boton);
+    cursor: pointer;
+}
+
+/* Contenedor del formulario */
+#pagina-datos form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 100%;
+    max-width: 450px;       
+}
+
+/* Separación entre filas de inputs */
 #pagina-datos form div {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;    /* Espacio más corto hacia abajo */
+    justify-content: space-between; 
+    margin-bottom: 12px;    
+    width: 100%;            
 }
 
-/* 4. Letras de los campos más pequeñas y ordenadas */
+/* Letras de los campos */
 #pagina-datos label {
     font-weight: bold;
-    width: 120px;           /* Mantiene la alineación pero más junta */
+    width: 120px;           
+    text-align: left;       
 }
 
-
-/* 5. Cuadros de texto */
+/* NUEVO: Cuadros de texto con esquinas curvadas */
 #pagina-datos input {
-    font-size: 19px;          /* Letra pequeña y legible */
-    padding: 15px 10px;       /* Agrega espacio interno arriba/abajo y a los lados */
-    width: 310px;             /* Mantiene el ancho */
+    font-size: 19px;          
+    padding: 8px 12px;           
+    width: 320px;             
     border: 1px solid #000000;
-    box-sizing: border-box;   /* Evita que el padding deforme el ancho total */
+    border-radius: 8px;     /* Curvatura suave y moderna para los inputs */
+    box-sizing: border-box;   
+}
+
+/* Ajuste para el bloque de cambiar contraseña */
+#pagina-datos form div:has(h3) {
+    justify-content: center; 
+    gap: 10px;               
+}
+
+/* Botón de la flechita (>) curvado */
+#pagina-datos form div button {
+    border-radius: 6px;     /* Esquinas curvas para el botón ">" */
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+/* Botón Cerrar Sesión Curvado */
+#pagina-datos form a button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;     /* Curvatura igual a la de los inputs */
+    border: none;
+    cursor: pointer;
+}
+
+/* Título e imagen centrados */
+.encabezado-perfil {
+    text-align: center;
+    margin-bottom: 20px;
 }
