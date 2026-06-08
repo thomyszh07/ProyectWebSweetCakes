@@ -10,10 +10,10 @@ body {
 }
 
 button {
-    background-color: var(--color-boton);      /* Pintará tu botón "VOLVER" de color rosa */
-    color: white;                              /* Texto del botón en blanco */
-    padding: 10px 20px;
-    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;    /* Esquinas muy redondeadas estilo cápsula */
+    border: 1px solid #ffffff;
+    background-color: var(--color-boton);
     cursor: pointer;
 }
 
@@ -109,7 +109,7 @@ body#pagina-datos {
 .btn-atras {
     padding: 15px 25px;
     border-radius: 30px;    /* Esquinas muy redondeadas estilo cápsula */
-    border: 1px solid #000;
+    border: 1px solid #ffffff;
     background-color: var(--color-boton);
     cursor: pointer;
 }
@@ -144,7 +144,7 @@ body#pagina-datos {
     font-size: 19px;          
     padding: 8px 12px;           
     width: 320px;             
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     border-radius: 8px;     /* Curvatura suave y moderna para los inputs */
     box-sizing: border-box;   
 }
