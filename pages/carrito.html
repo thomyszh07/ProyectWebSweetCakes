@@ -2,148 +2,134 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tu Carrito de Compras</title>
-    <link rel="stylesheet" href="../css/stylep.css">
-    <link rel="stylesheet" href="../css/stylem.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cakes — Carrito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body id="lettertitle">
+<body>
 
-    <!-- ====== ENCABEZADO CON NAVEGACIÓN ====== -->
+    <!-- ====== NAVEGACIÓN ====== -->
     <header>
         <nav>
             <span class="nav-logo">🍰 Sweet Cakes</span>
             <div class="nav-links">
-
                 <a href="registrado.html">Inicio</a>
                 <a href="carta-salada.html">Carta Salada</a>
                 <a href="carta-dulce.html">Carta Dulce</a>
-                <a href="carritos.html" class="activo"> Carrito</a>
+                <a href="carrito.html" class="activo">🛒 Carrito</a>
             </div>
         </nav>
     </header>
 
-    <br>
-    
-    <table border="0" width="100%" cellspacing="10">
-        <tr>
-            <!-- Columna Izquierda: Carrito de Compras -->
-            <td valign="top" width="70%">
-                
-                <h2>Tu Carrito de Compras</h2>
+    <!-- ====== CONTENIDO DEL CARRITO ====== -->
+    <div class="carrito-wrapper">
 
-                <!-- Tabla del carrito -->
-                <table border="1" width="100%" cellpadding="10" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th align="left">Productos</th>
-                            <th>Precio</th>
-                            <th>Cantidad</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img src="../assets/imagenes/dulces/keke.png" alt="compra1" width="60" height="45">
-                                <strong>keke</strong> - <small>Grupal - Postre clásico</small>
-                                <button type="button">Eliminar</button>
-                            </td>
-                            <td align="center">$0.00</td>
-                            <td align="center">
-                                <button type="button">-</button> 1 <button type="button">+</button>
-                            </td>
-                            <td align="center">$0.00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../assets/imagenes/salados/cuernitos.png" alt="compra2" width="60" height="45">
-                                <strong>Cuernitos</strong> - <small>Individual - Postre típico</small>
-                                <button type="button">Eliminar</button>
-                            </td>
-                            <td align="center">$0.00</td>
-                            <td align="center">
-                                <button type="button">-</button> 1 <button type="button">+</button>
-                            </td>
-                            <td align="center">$00.00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../assets/imagenes/dulces/trufas.png" alt="compra3" width="60" height="45">
-                                <strong>Trufas</strong> - <small>Individual</small>
-                                <button type="button">Eliminar</button>
-                            </td>
-                            <td align="center">$0.00</td>
-                            <td align="center">
-                                <button type="button">-</button> 2 <button type="button">+</button>
-                            </td>
-                            <td align="center">$00.00</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Columna principal: tabla de productos -->
+        <div style="flex:1; display:flex; flex-direction:column; gap:24px;">
 
-                <br>
+            <h2 style="font-family:var(--fuente-titulo); color:var(--color-cereza); font-size:1.5rem;">
+                Tu Carrito de Compras
+            </h2>
 
-                <!-- Sección de recomendados -->
-                <table border="1" width="100%" cellpadding="10" cellspacing="0">
+            <!-- Tabla de ítems -->
+            <table class="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td>
-                            <strong>Productos recomendados para ti</strong>
-                            <br><br>
-                            <table border="0" cellspacing="10">
-                                <tr>
-                                    <td align="center">
-                                        <img src="../assets/imagenes/salados/triple.png" alt="Triples" width="60" height="45"><br>
-                                        <small>Triple</small>
-                                    </td>
-                                    <td align="center">
-                                        <img src="../assets/imagenes/dulces/pastelmaracuya.png" alt="Pastel De Maracuyá" width="60" height="45"><br>
-                                        <small>Pastel De Maracuyá</small>
-
-                                </tr>
-                            </table>
+                            <img src="../assets/imagenes/dulces/keke.png" alt="Keke" width="55" height="42" style="border-radius:6px; display:inline-block; margin-right:10px; vertical-align:middle;">
+                            <strong>Keke de Naranja</strong>
+                            <br><small style="color:var(--color-texto-suave)">Postre clásico</small>
+                            <br><button style="margin-top:6px; padding:4px 12px; font-size:0.72rem; background:transparent; color:var(--color-cereza); border:1px solid var(--color-cereza); border-radius:20px;">Eliminar</button>
                         </td>
+                        <td style="text-align:center">S/ 29.00</td>
+                        <td style="text-align:center">
+                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">−</button>
+                            &nbsp;1&nbsp;
+                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">+</button>
+                        </td>
+                        <td style="text-align:center; font-weight:700; color:var(--color-cereza)">S/ 29.00</td>
                     </tr>
-                </table>
-
-            </td>
-
-            <!-- Columna Derecha: Resumen del Pedido -->
-            <td valign="top" width="30%">
-                
-                <table border="1" width="100%" cellpadding="15" cellspacing="0">
                     <tr>
                         <td>
-                            <h3 align="center">Resumen del Pedido</h3>
-                            <hr>
-                            <p>Subtotal Items (7): <strong>$00.00</strong></p>
-                            <p>Envío estimado: <strong>$0.00</strong></p>
-                            <p>Descuento: <strong>-$0.00</strong></p>
-                            <hr>
-                            <p><strong>Total: $00.00</strong></p>
-                            <br>
-                           
-                            <p align="center">
-                                <button type="button">
-                                    <a href="checkout.html">
-                                        Proceder al Pago
-                                    </a>
-                                </button>
-                            </p>
-                            <br>
-                            <p align="center">
-                                <button type="button">
-                                    <a href="registrado.html">
-                                    Seguir Comprando
-                                    </a>
-                                </button>
-                            </p>
+                            <img src="../assets/imagenes/salados/cuernitos.png" alt="Croissants" width="55" height="42" style="border-radius:6px; display:inline-block; margin-right:10px; vertical-align:middle;">
+                            <strong>Croissants</strong>
+                            <br><small style="color:var(--color-texto-suave)">Postre salado</small>
+                            <br><button style="margin-top:6px; padding:4px 12px; font-size:0.72rem; background:transparent; color:var(--color-cereza); border:1px solid var(--color-cereza); border-radius:20px;">Eliminar</button>
                         </td>
+                        <td style="text-align:center">S/ 8.00</td>
+                        <td style="text-align:center">
+                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">−</button>
+                            &nbsp;1&nbsp;
+                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">+</button>
+                        </td>
+                        <td style="text-align:center; font-weight:700; color:var(--color-cereza)">S/ 8.00</td>
                     </tr>
-                </table>
+                    <tr>
+                        <td>
+                            <img src="../assets/imagenes/dulces/trufas.png" alt="Trufas" width="55" height="42" style="border-radius:6px; display:inline-block; margin-right:10px; vertical-align:middle;">
+                            <strong>Trufas</strong>
+                            <br><small style="color:var(--color-texto-suave)">Individual</small>
+                            <br><button style="margin-top:6px; padding:4px 12px; font-size:0.72rem; background:transparent; color:var(--color-cereza); border:1px solid var(--color-cereza); border-radius:20px;">Eliminar</button>
+                        </td>
+                        <td style="text-align:center">S/ 34.00</td>
+                        <td style="text-align:center">
+                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">−</button>
+                            &nbsp;2&nbsp;
+                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">+</button>
+                        </td>
+                        <td style="text-align:center; font-weight:700; color:var(--color-cereza)">S/ 68.00</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            </td>
-        </tr>
-    </table>
+            <!-- Recomendados -->
+            <div style="background:var(--color-blanco); border:1.5px solid var(--color-rosa-claro); border-radius:var(--radio-card); padding:18px; box-shadow:var(--sombra-card);">
+                <p style="font-weight:700; margin-bottom:14px; color:var(--color-texto-suave); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">También te puede gustar</p>
+                <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                    <div style="text-align:center;">
+                        <img src="../assets/imagenes/salados/triple.png" alt="Triple" width="70" style="border-radius:8px; margin:0 auto;">
+                        <small style="display:block; margin-top:6px; font-weight:700;">Triple</small>
+                        <small style="color:var(--color-cereza)">S/ 10.00</small>
+                    </div>
+                    <div style="text-align:center;">
+                        <img src="../assets/imagenes/dulces/pastelmaracuya.png" alt="Maracuyá" width="70" style="border-radius:8px; margin:0 auto;">
+                        <small style="display:block; margin-top:6px; font-weight:700;">Pastel de Maracuyá</small>
+                        <small style="color:var(--color-cereza)">S/ 38.00</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Columna derecha: resumen del pedido -->
+        <div class="resumen-pedido">
+            <h3>Resumen del Pedido</h3>
+            <hr>
+            <p><span>Subtotal (4 items)</span><strong>S/ 105.00</strong></p>
+            <p><span>Envío estimado</span><strong>S/ 10.00</strong></p>
+            <p><span>Descuento</span><strong>− S/ 0.00</strong></p>
+            <hr>
+            <p class="total"><span>Total</span><span>S/ 115.00</span></p>
+            <button onclick="window.location.href='checkout.html'">Proceder al Pago</button>
+            <button onclick="window.location.href='registrado.html'" style="background:transparent; color:var(--color-cereza); border:1.5px solid var(--color-cereza);">Seguir Comprando</button>
+        </div>
+
+    </div>
+
+    <!-- ====== PIE DE PÁGINA ====== -->
+    <footer class="footer">
+        <p>© 2026 Sweet Cakes · Lima, Perú</p>
+    </footer>
 
 </body>
 </html>

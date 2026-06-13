@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> 
+<head>
     <meta charset="UTF-8">
-    <title>Postres Salados</title>
-    <link rel="stylesheet" href="../css/stylep.css">
-    <link rel="stylesheet" href="../css/stylem.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cakes — Carta Salada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="carta">
 
-    <!-- ====== ENCABEZADO CON NAVEGACIÓN ====== -->
-    <header class="headerbarcarta">
+    <!-- ====== NAVEGACIÓN ====== -->
+    <header>
         <nav>
             <span class="nav-logo">🍰 Sweet Cakes</span>
-            <div class="nav-links">
-
-                <!-- Campo de búsqueda -->
             <input type="text" placeholder="Buscar postres...">
-
+            <div class="nav-links">
                 <a href="registrado.html">Inicio</a>
-                <!-- "activo" resalta el link de la página actual -->
                 <a href="carta-salada.html" class="activo">Carta Salada</a>
                 <a href="carta-dulce.html">Carta Dulce</a>
                 <a href="carrito.html">🛒 Carrito</a>
@@ -26,65 +24,64 @@
         </nav>
     </header>
 
-    <h1 id="lettertitle">POSTRES SALADOS</h1>
+    <h1>CARTA SALADA</h1>
 
-    <!-- Contenedor principal de la cuadrícula -->
+    <!-- ====== CUADRÍCULA DE PRODUCTOS ====== -->
     <div class="cuadricula-postres">
 
         <div class="tarjeta-postre">
-            <div class="nombre-postre">EMPANADAS DE QUESO Y JAMON</div>
-            <img src="../assets/imagenes/salados/jamonadayqueso0.png" alt="EMPANADAS DE QUESO">
-            <div class="precio-postre">$6.00</div>
+            <div class="nombre-postre">EMPANADAS DE QUESO Y JAMÓN</div>
+            <img src="../assets/imagenes/salados/jamonadayqueso0.png" alt="Empanadas de Queso y Jamón">
+            <div class="precio-postre">S/ 6.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">PIZZA</div>
             <img src="../assets/imagenes/salados/pizza.png" alt="Pizza">
-            <div class="precio-postre">$45.00</div>
+            <div class="precio-postre">S/ 45.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">PITIPAN</div>
-            <img src="../assets/imagenes/salados/pititipam.png" alt="PITIPAN">
-            <div class="precio-postre">$20.00</div>
+            <img src="../assets/imagenes/salados/pititipam.png" alt="Pitipan">
+            <div class="precio-postre">S/ 20.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">CHOCOBOYO</div>
             <img src="../assets/imagenes/salados/chocoboyo.png" alt="Chocoboyo">
-            <div class="precio-postre">$20.00</div>
+            <div class="precio-postre">S/ 20.00</div>
         </div>
 
         <div class="tarjeta-postre">
-            <div class="nombre-postre">Croissants</div>
+            <div class="nombre-postre">CROISSANTS</div>
             <img src="../assets/imagenes/salados/cuernitos.png" alt="Croissants">
-            <div class="precio-postre">$8.00</div>
+            <div class="precio-postre">S/ 8.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">EMPANADAS</div>
             <img src="../assets/imagenes/salados/empanadas.png" alt="Empanadas">
-            <div class="precio-postre">$10.00</div>
+            <div class="precio-postre">S/ 10.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">TRIPLES</div>
             <img src="../assets/imagenes/salados/triple.png" alt="Triples">
-            <div class="precio-postre">$10.00</div>
+            <div class="precio-postre">S/ 10.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">MINI PANES</div>
             <img src="../assets/imagenes/salados/pitipan.png" alt="Mini Panes">
-            <div class="precio-postre">$29.00</div>
+            <div class="precio-postre">S/ 29.00</div>
         </div>
 
     </div>
 
+    <!-- Botón volver centrado -->
     <nav>
-        <a href="registrado.html">
-            <button type="button">VOLVER</button>
-        </a>
+        <button onclick="window.location.href='registrado.html'">← Volver</button>
     </nav>
 
 </body>

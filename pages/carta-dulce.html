@@ -1,105 +1,102 @@
-<!DOCTYPE html>  
-<html lang="es"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <title>Postres dulces</title>  
-    <link rel="stylesheet" href="../css/stylep.css">
-    <link rel="stylesheet" href="../css/stylem.css">
-</head> 
-<body class="carta">  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cakes — Carta Dulce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="carta">
 
-    <!-- ====== ENCABEZADO CON NAVEGACIÓN ====== -->
-    <header class="headerbarcarta">
+    <!-- ====== NAVEGACIÓN ====== -->
+    <header>
         <nav>
             <span class="nav-logo">🍰 Sweet Cakes</span>
-            <div class="nav-links">
-
             <input type="text" placeholder="Buscar postres...">
-
+            <div class="nav-links">
                 <a href="registrado.html">Inicio</a>
                 <a href="carta-salada.html">Carta Salada</a>
                 <a href="carta-dulce.html" class="activo">Carta Dulce</a>
-                <a href="carrito.html"> Carrito</a>
+                <a href="carrito.html">🛒 Carrito</a>
             </div>
         </nav>
     </header>
 
-    <h1 id="lettertitle">CARTA DE POSTRES DULCE</h1>  
+    <h1>CARTA DE POSTRES DULCES</h1>
 
-    <!-- Contenedor principal de la cuadrícula -->
-    <div class="cuadricula-postres">  
-        
+    <!-- ====== CUADRÍCULA DE PRODUCTOS ====== -->
+    <div class="cuadricula-postres">
+
         <div class="tarjeta-postre">
-            <div class="nombre-postre">TORTA DE CHOCOLATE</div> 
-            <img src="../assets/imagenes/dulces/tortacgococlate.png" alt="TORTA DE CHOCOLATE">
-            <div class="precio-postre">$34.00</div>
+            <div class="nombre-postre">TORTA DE CHOCOLATE</div>
+            <img src="../assets/imagenes/dulces/tortacgococlate.png" alt="Torta de Chocolate">
+            <div class="precio-postre">S/ 34.00</div>
         </div>
 
         <div class="tarjeta-postre">
-            <div class="nombre-postre">TORTA DE MARACUYA</div>
-            <img src="../assets/imagenes/dulces/pastelmaracuya.png" alt="TORTA DE MARACUYA">
-            <div class="precio-postre">$38.00</div>
+            <div class="nombre-postre">TORTA DE MARACUYÁ</div>
+            <img src="../assets/imagenes/dulces/pastelmaracuya.png" alt="Torta de Maracuyá">
+            <div class="precio-postre">S/ 38.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">PIE DE LIMÓN</div>
-            <img src="../assets/imagenes/dulces/pie_pedido.jpg" alt="PIE DE LIMÓN">
-            <div class="precio-postre">$40.00</div>
+            <img src="../assets/imagenes/dulces/pie_pedido.jpg" alt="Pie de Limón">
+            <div class="precio-postre">S/ 40.00</div>
             <div class="contenedor-tarjeta-visual">
-                <button class="boton-ver">
-                    <a href="pedidos.html">Ver</a>
-                </button>
+                <button class="boton-ver" onclick="window.location.href='pedidos.html'">Ver detalle</button>
             </div>
         </div>
 
         <div class="tarjeta-postre">
-            <div class="nombre-postre">CHEESCAKE DE FRUTOS</div>
-            <img src="../assets/imagenes/dulces/cheescake.png" alt="CHEESCAKE DE FRUTOS">
-            <div class="precio-postre">$39.00</div>
+            <div class="nombre-postre">CHEESECAKE DE FRUTOS</div>
+            <img src="../assets/imagenes/dulces/cheescake.png" alt="Cheesecake de Frutos">
+            <div class="precio-postre">S/ 39.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">KEKE DE NARANJA</div>
-            <img src="../assets/imagenes/dulces/keke.png" alt="KEKE DE NARANJA">
-            <div class="precio-postre">$29.00</div>
+            <img src="../assets/imagenes/dulces/keke.png" alt="Keke de Naranja">
+            <div class="precio-postre">S/ 29.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">TORTA HELADA</div>
-            <img src="../assets/imagenes/dulces/tortahelada.png" alt="TORTA HELADA">
-            <div class="precio-postre">$34.00</div>
+            <img src="../assets/imagenes/dulces/tortahelada.png" alt="Torta Helada">
+            <div class="precio-postre">S/ 34.00</div>
         </div>
 
         <div class="tarjeta-postre">
-            <div class="nombre-postre">TORTAS TRES LECHES</div>
-            <img src="../assets/imagenes/dulces/tortatresleches.png" alt="TORTAS TRES LECHES">
-            <div class="precio-postre">$34.00</div>
+            <div class="nombre-postre">TORTA TRES LECHES</div>
+            <img src="../assets/imagenes/dulces/tortatresleches.png" alt="Torta Tres Leches">
+            <div class="precio-postre">S/ 34.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">TRUFAS</div>
-            <img src="../assets/imagenes/dulces/trufas.png" alt="TRUFAS">
-            <div class="precio-postre">$34.00</div>
+            <img src="../assets/imagenes/dulces/trufas.png" alt="Trufas">
+            <div class="precio-postre">S/ 34.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">PIONONO</div>
-            <img src="../assets/imagenes/dulces/pionono.png" alt="PIONONO">
-            <div class="precio-postre">$27.00</div>
+            <img src="../assets/imagenes/dulces/pionono.png" alt="Pionono">
+            <div class="precio-postre">S/ 27.00</div>
         </div>
 
         <div class="tarjeta-postre">
             <div class="nombre-postre">MINI DUPLA</div>
-            <img src="../assets/imagenes/dulces/dupla dulce.png" alt="MINI DUPLA">
-            <div class="precio-postre">$22.00</div>
+            <img src="../assets/imagenes/dulces/dupla dulce.png" alt="Mini Dupla">
+            <div class="precio-postre">S/ 22.00</div>
         </div>
 
     </div>
 
+    <!-- Botón volver centrado -->
     <nav>
-        <a href="registrado.html">
-            <button type="button">VOLVER</button>
-        </a>
+        <button onclick="window.location.href='registrado.html'">← Volver</button>
     </nav>
 
 </body>
