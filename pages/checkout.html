@@ -1,194 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Finalizar Pedido - Simplificado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cakes — Finalizar Pedido</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
     <script>
         function procesarPago(event) {
             event.preventDefault();
             document.getElementById('checkout-principal').style.display = 'none';
-            document.getElementById('pantalla-gracias').style.display = 'block';
+            document.getElementById('pantalla-gracias').style.display = 'flex';
         }
     </script>
-    <link rel="stylesheet" href="../css/stylem.css">
-    <link rel="stylesheet" href="../css/stylep.css">
 </head>
-<body bgcolor="#ffffff" style="font-family:sans-serif;">
+<body>
 
+    <!-- ====== CHECKOUT PRINCIPAL ====== -->
     <div id="checkout-principal">
-       <!-- ====== ENCABEZADO CON NAVEGACIÓN ====== -->
-    <header class="headerbarcarta">
-        <nav>
-            <span class="nav-logo">🍰 Sweet Cakes</span>
-            <div class="nav-links">
 
-                <!-- Campo de búsqueda -->
-            <input type="text" placeholder="Buscar postres...">
+        <!-- NAVEGACIÓN -->
+        <header>
+            <nav>
+                <span class="nav-logo">🍰 Sweet Cakes</span>
+                <div class="nav-links">
+                    <a href="registrado.html">Inicio</a>
+                    <a href="carrito.html">🛒 Carrito</a>
+                    <a href="checkout.html" class="activo">Checkout</a>
+                </div>
+            </nav>
+        </header>
 
-                <a href="registrado.html">Inicio</a>
-                <!-- "activo" resalta el link de la página actual -->
-                <a href="carrito.html">🛒Carrito</a>
-                <a href="checkout.html" class="activo">Checkout</a>
-            </div>
-        </nav>
-    </header>
-
-
-        
-        <h1> Finalizar Pedido</h1>
+        <h1 style="font-family:var(--fuente-titulo); color:var(--color-cereza); text-align:center; padding:28px 20px 10px; font-size:clamp(1.5rem,4vw,2.2rem);">
+            Finalizar Pedido
+        </h1>
 
         <form onsubmit="procesarPago(event)">
-            <table border="0" width="100%" cellpadding="10" cellspacing="0">
-                <tr>
-                    <td width="70%" valign="top">
+            <div class="checkout-layout">
 
-                        <tr border="2" width="100%" cellpadding="8" cellspacing="0">
-                            <tr><td colspan="2"><h2>Datos de Contacto</h2><hr size="1" color="#000"></td></tr>
-                        </tr>
-                                <td><b>NOMBRE</b><br><input type="text" value="nombre" style="width:95%"></td>
-                                <td><b>APELLIDO</b><br><input type="text" value="apellido" style="width:95%"></td>
-                            </tr>
-                            <tr>
-                                <td><b>CORREREO ELECTRÓNICO</b><br><input type="text" value="Correo@ejemplo.com" style="width:95%"></td>
-                                <td><b>TELÉFONO / WHATSAPP</b><br><input type="text" value="+51 999 999 999" style="width:95%"></td>
-                            </tr>
-                        </table><br>
+                <!-- Columna izquierda: formularios -->
+                <div class="checkout-form-col">
 
-                        <table border="2" width="100%" cellpadding="8" cellspacing="0">
-                            <tr><td colspan="2"><h2>Dirección de Entrega</h2><hr size="1" color="#000"></td></tr>
-                            <tr><td colspan="2"><b>DIRECCIÓN</b><br><input type="text" value="Av. " style="width:98%"></td></tr>
-                            <tr>
-                                <td><b>DISTRITO</b><br><input type="text" value="distrito" style="width:95%"></td>
-                                <td><b>REFERENCIA</b><br><input type="text" value="Cerca a..." style="width:95%"></td>
-                            </tr>
-                            <tr>
-                                <td><b>FECHA DE ENTREGA</b><br><input type="date" value="2026-06-04"></td>
-                                <td>
-                                    <b>TURNO DE ENTREGA</b>
-                                    <table border="1" cellpadding="2" cellspacing="0" width="100%">
-                                        <tr><td>Mañana (9 am - 12 pm) <span style="float:right">▼</span></td></tr>
-                                        <tr bgcolor="#eee"><td><small>Tarde (12 pm - 6 pm)</small></td></tr>
-                                        <tr bgcolor="#eee"><td><small>Noche (6 pm - 9 pm)</small></td></tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr><td colspan="2"><b>NOTA OPCIONAL</b><br><input type="text" value="Tocar timbre..." style="width:98%"></td></tr>
-                        </table><br>
+                    <!-- Datos de contacto -->
+                    <div class="checkout-seccion">
+                        <h2>Datos de Contacto</h2>
+                        <div class="checkout-fila">
+                            <div><label>Nombre</label><input type="text" placeholder="Tu nombre"></div>
+                            <div><label>Apellido</label><input type="text" placeholder="Tu apellido"></div>
+                        </div>
+                        <div class="checkout-fila">
+                            <div><label>Correo electrónico</label><input type="email" placeholder="correo@ejemplo.com"></div>
+                            <div><label>Teléfono / WhatsApp</label><input type="tel" placeholder="+51 999 999 999"></div>
+                        </div>
+                    </div>
 
-                        <table border="2" width="100%" cellpadding="8" cellspacing="0">
-                            <tr><td><h2>Método de Pago</h2><hr size="1" color="#000"></td></tr>
-                            <tr><td><table border="1" width="100%" cellpadding="6"><tr><td width="20" bgcolor="#00b4c4"></td><td><b>Plin</b> - Transferencia instantánea</td></tr></table></td></tr>
-                            <tr><td><table border="1" width="100%" cellpadding="6"><tr><td width="20" bgcolor="#742474"></td><td><b>Yape</b> - Pago con QR o número</td></tr></table></td></tr>
-                            <tr>
-                                <td align="center">
-                                    <b>Escanea el código o transfiere</b><br><br>
-                                    <table border="0" cellpadding="10">
-                                        <tr>
-                                            <td align="center">
-                                                <table border="1" cellspacing="1" cellpadding="4">
-                                                    <tr><td bgcolor="#742474"></td><td></td><td bgcolor="#742474"></td></tr>
-                                                    <tr><td></td><td bgcolor="#742474"></td><td></td></tr>
-                                                    <tr><td bgcolor="#742474"></td><td></td><td bgcolor="#742474"></td></tr>
-                                                </table><br>
-                                                <small><b>999-999-999</b><br>Yape - Sweet Cakes</small>
-                                            </td>
-                                            <td width="40"><b>|</b></td>
-                                            <td align="center">
-                                                <table border="1" cellspacing="1" cellpadding="4">
-                                                    <tr><td></td><td bgcolor="#00b4c4"></td><td></td></tr>
-                                                    <tr><td bgcolor="#00b4c4"></td><td></td><td bgcolor="#00b4c4"></td></tr>
-                                                    <tr><td></td><td bgcolor="#00b4c4"></td><td></td></tr>
-                                                </table><br>
-                                                <small><b>999-999-999</b><br>Plin - Sweet Cakes</small>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table><br>
+                    <!-- Dirección de entrega -->
+                    <div class="checkout-seccion">
+                        <h2>Dirección de Entrega</h2>
+                        <div class="checkout-campo">
+                            <label>Dirección</label>
+                            <input type="text" placeholder="Av. ...">
+                        </div>
+                        <div class="checkout-fila">
+                            <div><label>Distrito</label><input type="text" placeholder="Distrito"></div>
+                            <div><label>Referencia</label><input type="text" placeholder="Cerca a..."></div>
+                        </div>
+                        <div class="checkout-fila">
+                            <div><label>Fecha de Entrega</label><input type="date" value="2026-06-09"></div>
+                            <div>
+                                <label>Turno de Entrega</label>
+                                <select style="width:100%; padding:9px 12px; border:1.5px solid var(--color-rosa-claro); border-radius:var(--radio-input); font-family:var(--fuente-cuerpo); font-size:0.9rem; color:var(--color-texto); background:var(--color-blanco); outline:none;">
+                                    <option>Mañana (9 am – 12 pm)</option>
+                                    <option>Tarde (12 pm – 6 pm)</option>
+                                    <option>Noche (6 pm – 9 pm)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="checkout-campo">
+                            <label>Nota opcional</label>
+                            <input type="text" placeholder="Tocar timbre, dejar con portero...">
+                        </div>
+                    </div>
 
-                        <table border="2" width="100%" cellpadding="8" cellspacing="0">
-                            <tr><td><h2>Confirmación legal</h2><hr size="1" color="#000"></td></tr>
-                            <tr><td><input type="checkbox" checked> Acepto <a href="#">Términos y Condiciones</a></td></tr>
-                            <tr><td><input type="checkbox" checked> He leído el <a href="#">Libro de Reclamaciones</a></td></tr>
-                            <tr><td><input type="checkbox"> Quiero recibir ofertas</td></tr>
-                            <tr>
-                                <td align="center"><br>
-                                    <input type="submit" value=" Confirmar y Pagar - $109.00 " style="padding:5px 20px;"><br><br>
-                                    <input type="button" value=" Volver al Carrito " style="padding:5px 20px;" onclick="window.location.href='carrito.html';">
-                                </td>
-                            </tr>
-                        </table>
+                    <!-- Método de pago -->
+                    <div class="checkout-seccion">
+                        <h2>Método de Pago</h2>
+                        <div style="display:flex; flex-direction:column; gap:12px;">
+                            <label style="display:flex; align-items:center; gap:12px; cursor:pointer; padding:12px; border:1.5px solid var(--color-rosa-claro); border-radius:10px;">
+                                <input type="radio" name="pago" value="plin" checked style="width:auto; accent-color:var(--color-cereza);">
+                                <span style="background:#00b4c4; width:14px; height:14px; border-radius:3px; display:inline-block;"></span>
+                                <strong>Plin</strong> — Transferencia instantánea
+                            </label>
+                            <label style="display:flex; align-items:center; gap:12px; cursor:pointer; padding:12px; border:1.5px solid var(--color-rosa-claro); border-radius:10px;">
+                                <input type="radio" name="pago" value="yape" style="width:auto; accent-color:var(--color-cereza);">
+                                <span style="background:#742474; width:14px; height:14px; border-radius:3px; display:inline-block;"></span>
+                                <strong>Yape</strong> — Pago con QR o número
+                            </label>
+                            <label style="display:flex; align-items:center; gap:12px; cursor:pointer; padding:12px; border:1.5px solid var(--color-rosa-claro); border-radius:10px;">
+                                <input type="radio" name="pago" value="efectivo" style="width:auto; accent-color:var(--color-cereza);">
+                                <span style="font-size:1.1rem;">💵</span>
+                                <strong>Efectivo</strong> — Contra entrega
+                            </label>
+                        </div>
+                    </div>
 
-                    </td>
+                    <!-- Confirmación legal -->
+                    <div class="checkout-seccion">
+                        <h2>Confirmación</h2>
+                        <div style="display:flex; flex-direction:column; gap:10px; font-size:0.9rem;">
+                            <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                                <input type="checkbox" checked style="width:auto; accent-color:var(--color-cereza);">
+                                Acepto los <a href="#" style="color:var(--color-cereza); font-weight:700;">Términos y Condiciones</a>
+                            </label>
+                            <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                                <input type="checkbox" checked style="width:auto; accent-color:var(--color-cereza);">
+                                He leído el <a href="#" style="color:var(--color-cereza); font-weight:700;">Libro de Reclamaciones</a>
+                            </label>
+                            <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                                <input type="checkbox" style="width:auto; accent-color:var(--color-cereza);">
+                                Quiero recibir ofertas y novedades
+                            </label>
+                        </div>
+                        <div style="display:flex; gap:12px; margin-top:22px; flex-wrap:wrap;">
+                            <button type="submit" class="btn-confirmar">✓ Confirmar y Pagar — S/ 115.00</button>
+                            <button type="button" onclick="window.location.href='carrito.html'" style="background:transparent; color:var(--color-texto-suave); border:1.5px solid var(--color-rosa-claro); font-weight:700;">← Volver al Carrito</button>
+                        </div>
+                    </div>
 
-                    <td width="30%" valign="top">
-                        <table border="2" width="100%" cellpadding="10" cellspacing="0">
-                            <tr><td align="center"><h3>Tu Pedido</h3><hr size="2" color="#000"></td></tr>
-                            <tr>
-                                <td>
-                                    <table border="0" width="100%" cellpadding="4">
-                                        <tr><td>Postre x1</td><td align="right"><u>$35.00</u></td></tr>
-                                        <tr><td>Postre x4</td><td align="right"><u>$44.00</u></td></tr>
-                                        <tr><td>Postre x2</td><td align="right"><u>$20.00</u></td></tr>
-                                        <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
-                                        <tr><td>Subtotal</td><td align="right"><b><font color="#c44d4d">$99.00</font></b></td></tr>
-                                        <tr><td>Envío</td><td align="right"><b><font color="#c44d4d">$10.00</font></b></td></tr>
-                                        <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
-                                        <tr><td><b>Total</b></td><td align="right"><b><font color="#c44d4d">$109.00</font></b></td></tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr><td align="center"><br><small>@SweetCakes</small></td></tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
+                </div>
+
+                <!-- Columna derecha: resumen -->
+                <div class="checkout-resumen-col">
+                    <h3 style="font-family:var(--fuente-titulo); color:var(--color-cereza); margin-bottom:14px;">Tu Pedido</h3>
+                    <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin-bottom:14px;">
+                    <div style="display:flex; flex-direction:column; gap:8px; font-size:0.9rem;">
+                        <div style="display:flex; justify-content:space-between;"><span>Keke de Naranja x1</span><span>S/ 29.00</span></div>
+                        <div style="display:flex; justify-content:space-between;"><span>Croissants x1</span><span>S/ 8.00</span></div>
+                        <div style="display:flex; justify-content:space-between;"><span>Trufas x2</span><span>S/ 68.00</span></div>
+                    </div>
+                    <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:12px 0;">
+                    <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px;"><span>Subtotal</span><span>S/ 105.00</span></div>
+                    <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px;"><span>Envío</span><span>S/ 10.00</span></div>
+                    <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:12px 0;">
+                    <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1rem; color:var(--color-cereza);"><span>Total</span><span>S/ 115.00</span></div>
+                    <p style="font-size:0.75rem; color:var(--color-texto-suave); margin-top:14px; text-align:center;">@SweetCakes · Lima, Perú</p>
+                </div>
+
+            </div>
         </form>
+
     </div>
 
-    <div id="pantalla-gracias" style="display: none; padding: 20px;">
-        <table border="0" width="100%" cellpadding="0" cellspacing="0">
-            <tr>
-                <td align="center">
-                    <h1 style="font-size: 50px; color: #4CAF50; margin-bottom: 5px;">🎉 ¡GRACIAS POR TU COMPRA! 🎉</h1>
-                    <h3>Tu pedido en <b>Sweet Cakes</b> ha sido procesado con éxito.</h3>
-                    <p>En breve nos comunicaremos contigo por WhatsApp para coordinar la entrega.</p>
-                    <hr size="2" color="#eee" width="60%"><br>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <table border="2" cellpadding="15" cellspacing="0" width="50%" bgcolor="#f9f9f9">
-                        <tr>
-                            <td bgcolor="#8cb4f5" align="center"><b>📋 RESUMEN DE TU COMPRA</b></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table border="0" width="100%" cellpadding="6">
-                                    <tr><td>🍰 Postre x1</td><td align="right">$35.00</td></tr>
-                                    <tr><td>🧁 Postre x4</td><td align="right">$44.00</td></tr>
-                                    <tr><td>🍩 Postre x2</td><td align="right">$20.00</td></tr>
-                                    <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
-                                    <tr><td><b>Subtotal</b></td><td align="right">$99.00</td></tr>
-                                    <tr><td><b>Envío</b></td><td align="right">$10.00</td></tr>
-                                    <tr><td colspan="2"><hr size="1" color="#000"></td></tr>
-                                    <tr><td><font size="4"><b>Total Pagado:</b></font></td><td align="right"><font size="4" color="#c44d4d"><b>$109.00</b></font></td></tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" bgcolor="#eee">
-                                <small><b>Código de operación simulado:</b> #SC-2026-9481</small>
-                            </td>
-                        </tr>
-                    </table>
-                    <br><br>
-                    <input type="button" value=" Volver a la Tienda " style="padding:10px 30px; font-weight:bold;" onclick="window.location.href='registrado.html';">
-                </td>
-            </tr>
-        </table>
+    <!-- ====== PANTALLA DE AGRADECIMIENTO ====== -->
+    <div id="pantalla-gracias" class="pantalla-gracias" style="display:none; flex-direction:column; align-items:center;">
+        <h1>🎉 ¡Gracias por tu compra!</h1>
+        <p style="color:var(--color-texto-suave); max-width:480px; margin-top:8px;">
+            Tu pedido en <strong>Sweet Cakes</strong> fue procesado con éxito.<br>
+            En breve nos comunicaremos contigo por WhatsApp para coordinar la entrega.
+        </p>
+        <div class="resumen-compra">
+            <p style="font-weight:700; color:var(--color-cereza); margin-bottom:12px; font-family:var(--fuente-titulo);">📋 Resumen de tu Compra</p>
+            <div style="display:flex; flex-direction:column; gap:6px; font-size:0.9rem;">
+                <div style="display:flex; justify-content:space-between;"><span>🍰 Keke de Naranja x1</span><span>S/ 29.00</span></div>
+                <div style="display:flex; justify-content:space-between;"><span>🥐 Croissants x1</span><span>S/ 8.00</span></div>
+                <div style="display:flex; justify-content:space-between;"><span>🍫 Trufas x2</span><span>S/ 68.00</span></div>
+                <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:8px 0;">
+                <div style="display:flex; justify-content:space-between;"><span>Subtotal</span><span>S/ 105.00</span></div>
+                <div style="display:flex; justify-content:space-between;"><span>Envío</span><span>S/ 10.00</span></div>
+                <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:8px 0;">
+                <div style="display:flex; justify-content:space-between; font-weight:700; color:var(--color-cereza); font-size:1rem;"><span>Total Pagado</span><span>S/ 115.00</span></div>
+            </div>
+            <p style="font-size:0.78rem; color:var(--color-texto-suave); margin-top:14px; text-align:center;">Código de operación: #SC-2026-9481</p>
+        </div>
+        <button onclick="window.location.href='registrado.html'" style="margin-top:20px;">Volver a la Tienda</button>
     </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2026 Sweet Cakes · Lima, Perú</p>
+    </footer>
 
 </body>
 </html>

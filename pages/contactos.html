@@ -2,47 +2,55 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contactos y Redes Sociales</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cakes — Contactos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-<div class="pantalla-contactos">
-    <div>
-        
-        <h1>CONTACTOS Y REDES SOCIALES</h1>
-    </div>
-    <br>
-
-    <div>
-        <div>
-            <img src="../assets/imagenes/usuarios/facebook.png" alt="Facebook">
-            <span>sweet_cakes</span>
-        </div>
-        <br>
-
-        <div>
-            <img src="../assets/imagenes/usuarios/whatsapp.png" alt="WhatsApp">
-            <span>+51 937 793 992 (PERU)</span>
-        </div>
-        <br>
-
-        <div>
-            <img src="../assets/imagenes/usuarios/social.png" alt="Instagram">
-            <span>@sweet_cakes</span>
-        </div>
-        <br>
-    </div>
-
-    <div>
-        <p>¡GRACIAS POR AYUDARNOS A MEJORAR!</p>
-        <br>
-        <nav class="navegacion-superior">
-            <a href="registrado.html">
-                <button type="button">VOLVER</button>
-            </a>
+    <!-- NAVEGACIÓN -->
+    <header>
+        <nav>
+            <span class="nav-logo">🍰 Sweet Cakes</span>
+            <div class="nav-links">
+                <a href="registrado.html">Inicio</a>
+                <a href="contactos.html" class="activo">Contáctanos</a>
+            </div>
         </nav>
+    </header>
+
+    <!-- ====== CONTACTOS ====== -->
+    <div class="pantalla-contactos">
+
+        <h1>Contactos y Redes Sociales</h1>
+
+        <div class="bloque-redes">
+            <div class="fila-contacto">
+                <img class="icono-mini" src="../assets/imagenes/usuarios/facebook.png" alt="Facebook">
+                <span>sweet_cakes</span>
+            </div>
+            <div class="fila-contacto">
+                <img class="icono-mini" src="../assets/imagenes/usuarios/whatsapp.png" alt="WhatsApp">
+                <span>+51 937 793 992</span>
+            </div>
+            <div class="fila-contacto">
+                <img class="icono-mini" src="../assets/imagenes/usuarios/social.png" alt="Instagram">
+                <span>@sweet_cakes</span>
+            </div>
+        </div>
+
+        <p style="color:var(--color-texto-suave); margin-bottom:24px;">¡Gracias por ayudarnos a mejorar!</p>
+
+        <button onclick="window.location.href='registrado.html'">← Volver</button>
+
     </div>
-</div>    
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2026 Sweet Cakes · Lima, Perú</p>
+    </footer>
+
 </body>
 </html>

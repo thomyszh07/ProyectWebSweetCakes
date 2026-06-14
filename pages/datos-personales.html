@@ -2,48 +2,50 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Datos Personales</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cakes — Datos Personales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body id="pagina-datos">
 
-    <!-- Botón Atrás -->
+    <!-- Botón volver arriba a la izquierda -->
     <div class="navegacion-superior">
-        <button type="button" onclick="history.back()" class="btn-atras">
-            &larr; Volver
+        <button onclick="history.back()" class="btn-atras" style="background:var(--color-boton); color:var(--color-blanco); border-radius:var(--radio-btn);">
+            ← Volver
         </button>
     </div>
 
+    <!-- Encabezado de perfil -->
     <div class="encabezado-perfil">
-        <img src="../assets/imagenes/usuarios/usuario.png" alt="Icono Perfil de Usuario">
-        <h2>DATOS PERSONALES</h2>
+        <img src="../assets/imagenes/usuarios/usuario.png" alt="Perfil de usuario">
+        <h2>Datos Personales</h2>
     </div>
 
+    <!-- Formulario -->
     <form>
-        <div> 
-            <label>NOMBRE :</label>
-            <input type="text">
-        </div>
-
         <div>
-            <label>TELÉFONO :</label>
-            <input type="tel">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
         </div>
-
         <div>
-            <label>GMAIL :</label>
-            <input type="email">
+            <label>Teléfono</label>
+            <input type="tel" placeholder="+51 999 999 999">
+        </div>
+        <div>
+            <label>Correo</label>
+            <input type="email" placeholder="correo@ejemplo.com">
         </div>
 
-        <br>
-        
+        <!-- Botón cerrar sesión -->
         <a href="../index.html">
-            <button type="button">
-                <img src="../assets/imagenes/usuarios/salida-de-emergencia.png" alt="CERRAR">CERRAR SESION
+            <button type="button" style="margin-top:10px; background:var(--color-cereza); color:var(--color-blanco); border-radius:var(--radio-btn);">
+                <img src="../assets/imagenes/usuarios/salida-de-emergencia.png" alt="Salir" style="width:18px;height:18px;object-fit:contain;">
+                Cerrar Sesión
             </button>
         </a>
     </form>
-    <br>
 
 </body>
 </html>
