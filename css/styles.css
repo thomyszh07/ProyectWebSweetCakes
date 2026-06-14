@@ -106,25 +106,45 @@ nav {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    /* ✅ Quitado el padding: 15px 20px — el header ya controla la altura */
 }
-.nav-logo{
-    display:flex;
-    align-items:center; /* Centra imagen y texto verticalmente */
-    gap:10px; /* Espacio entre logo y texto */
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
     font-family: var(--f-titulo);
     font-size: 1.45rem;
     font-weight: 700;
     color: var(--cereza);
+
+    /* ✅ Quitado transform: translateY(5px) — causaba el desajuste */
 }
 
-.nav-logo img{
-    width:50px; /* Tamaño del logo */
-    height:50px;
-    object-fit:cover; /* Evita deformaciones */
-    border-radius:60%; /* Lo vuelve circular */
+.nav-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* ✅ 50% en vez de 60% — valor correcto para círculo */
 }
-.nav-links { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+/* Buscador */
+nav input[type="text"] {
+    width: 190px;
+    padding: 7px 16px;
+    border-radius: var(--r-btn);
+    font-size: .82rem;
+    background: var(--fondo);
+}
+
+/* Menú */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
 
 nav a {
     color: var(--texto-s);
@@ -136,11 +156,16 @@ nav a {
     border-radius: var(--r-btn);
     transition: background-color .25s, color .25s;
 }
-nav a:hover          { background-color: var(--rosa-claro); color: var(--cereza); }
-nav a.activo         { background-color: var(--cereza); color: var(--blanco); }
 
-/* Buscador en el nav */
-nav input[type="text"] { width:190px; padding:7px 16px; border-radius:var(--r-btn); font-size:.82rem; background:var(--fondo); }
+nav a:hover {
+    background-color: var(--rosa-claro);
+    color: var(--cereza);
+}
+
+nav a.activo {
+    background-color: var(--cereza);
+    color: var(--blanco);
+}
 
 /* === 4. FOOTER ================================================ */
 .footer {
