@@ -107,12 +107,22 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
 }
-.nav-logo {
+.nav-logo{
+    display:flex;
+    align-items:center; /* Centra imagen y texto verticalmente */
+    gap:10px; /* Espacio entre logo y texto */
+
     font-family: var(--f-titulo);
     font-size: 1.45rem;
     font-weight: 700;
     color: var(--cereza);
-    white-space: nowrap;
+}
+
+.nav-logo img{
+    width:50px; /* Tamaño del logo */
+    height:50px;
+    object-fit:cover; /* Evita deformaciones */
+    border-radius:60%; /* Lo vuelve circular */
 }
 .nav-links { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
 
