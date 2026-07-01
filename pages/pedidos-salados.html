@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cakes - Detalle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="pedido-postre">
+
+    <button class="btn-volver" onclick="window.location.href='carta-dulce.html'">
+        ← Volver
+    </button>
+
+    <div class="container-detalle">
+
+        <div class="columna-izquierda">
+
+            <div class="titulo-caja">
+                <h1 id="nombrePostre"></h1>
+            </div>
+
+            <div class="imagen-caja">
+                <img id="imagenPostre" src="" alt="">
+            </div>
+
+        </div>
+
+        <div class="columna-derecha">
+
+            <h2 style="color:var(--color-cereza);font-family:var(--fuente-titulo);">
+                Descripción
+            </h2>
+
+            <p id="descripcionPostre"
+               style="color:var(--color-texto-suave);margin-bottom:18px;">
+            </p>
+
+            <h2 style="color:var(--color-cereza);font-family:var(--fuente-titulo);">
+                Especificaciones
+            </h2>
+
+            <ul style="list-style:none;padding:0;font-weight:700;margin-bottom:20px;color:var(--color-texto-suave);">
+                <li>— Una Docena</li>
+                <li>— Porcion entera (Solo disponibles en algunas)</li>
+            </ul>
+
+            <div class="fila-precio">
+                <label id="precioPorcion"></label>
+                <input type="number" value="1" min="0">
+            </div>
+
+          
+
+            <button class="btn-rosa">
+                Añadir al Carrito
+            </button>
+
+            <div class="fila-resumen">
+
+                <div class="campo-bloque">
+                    <label>Total:</label>
+                    <input id="total" type="text" readonly value="S/ 0.00">
+                </div>
+
+            </div>
+
+            <button class="btn-rosa"
+            onclick="window.location.href='checkout.html'">
+                Ir a Pagar
+            </button>
+
+        </div>
+
+    </div>
+
+ <script src="../script/salados.js"></script>
+
+</body>
+</html>  

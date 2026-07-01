@@ -4,87 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Cakes — Carta Salada</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body class="carta">
 
-    <!-- ====== NAVEGACIÓN ====== -->
-    <header>
-        <nav>
-            <span class="nav-logo"> 
-                <img src="../assets/imagenes/banners/Logo SweetCakesog.jpeg" alt="Mascota SweetCakes"> Sweet Cakes
-            </span>
-            <input type="text" placeholder="Buscar postres...">
-            <div class="nav-links">
-                <a href="registrado.html">Inicio</a>
-                <a href="carta-salada.html" class="activo">Carta Salada</a>
-                <a href="carta-dulce.html">Carta Dulce</a>
-                <a href="carrito.html">🛒 Carrito</a>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <span class="nav-logo">
+            <img src="../assets/imagenes/banners/Logo SweetCakesog.jpeg" alt="Mascota SweetCakes">
+            Sweet Cakes
+        </span>
 
-    <h1>CARTA SALADA</h1>
+        <input type="text" placeholder="Buscar postres...">
 
-    <!-- ====== CUADRÍCULA DE PRODUCTOS ====== -->
-    <div class="cuadricula-postres">
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">EMPANADAS DE QUESO Y JAMÓN</div>
-            <img src="../assets/imagenes/salados/jamonadayqueso0.png" alt="Empanadas de Queso y Jamón">
-            <div class="precio-postre">S/ 6.00</div>
+        <div class="nav-links">
+            <a href="registrado.html">Inicio</a>
+            <a href="carta-salada.html" class="activo">Carta Salada</a>
+            <a href="carta-dulce.html">Carta Dulce</a>
+            <a href="carrito.html">🛒 Carrito</a>
         </div>
+    </nav>
+</header>
 
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">PIZZA</div>
-            <img src="../assets/imagenes/salados/pizza.png" alt="Pizza">
-            <div class="precio-postre">S/ 45.00</div>
+<h1>CARTA SALADA</h1>
+
+<div class="cuadricula-postres">
+
+    <!-- 1 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">EMPANADAS JAMÓN Y QUESO</div>
+        <img src="../assets/imagenes/salados/jamonadayqueso0.png" alt="Empanadas">
+        <div class="precio-postre">S/ 20.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos-salados.html?id=1'">
+                Ver detalle
+            </button>
         </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">PITIPAN</div>
-            <img src="../assets/imagenes/salados/pititipam.png" alt="Pitipan">
-            <div class="precio-postre">S/ 20.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">CHOCOBOYO</div>
-            <img src="../assets/imagenes/salados/chocoboyo.png" alt="Chocoboyo">
-            <div class="precio-postre">S/ 20.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">CROISSANTS</div>
-            <img src="../assets/imagenes/salados/cuernitos.png" alt="Croissants">
-            <div class="precio-postre">S/ 8.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">EMPANADAS</div>
-            <img src="../assets/imagenes/salados/empanadas.png" alt="Empanadas">
-            <div class="precio-postre">S/ 10.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">TRIPLES</div>
-            <img src="../assets/imagenes/salados/triple.png" alt="Triples">
-            <div class="precio-postre">S/ 10.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">MINI PANES</div>
-            <img src="../assets/imagenes/salados/pitipan.png" alt="Mini Panes">
-            <div class="precio-postre">S/ 29.00</div>
-        </div>
-
     </div>
 
-    <!-- Botón volver centrado -->
-    <nav>
-        <button onclick="window.location.href='registrado.html'">← Volver</button>
-    </nav>
+    <!-- 2 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">PIZZA</div>
+        <img src="../assets/imagenes/salados/pizza.png" alt="Pizza">
+        <div class="precio-postre">S/ 45.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos-salados.html?id=2'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">PITIPAN</div>
+        <img src="../assets/imagenes/salados/pititipam.png" alt="Pitipan">
+        <div class="precio-postre">S/ 20.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos-salados.html?id=3'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">CHOCOBOYO</div>
+        <img src="../assets/imagenes/salados/chocoboyo.png" alt="Chocoboyo">
+        <div class="precio-postre">S/ 20.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos-salados.html?id=4'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">CROISSANTS</div>
+        <img src="../assets/imagenes/salados/cuernitos.png" alt="Croissants">
+        <div class="precio-postre">S/ 40.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos-salados.html?id=5'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">EMPANADAS</div>
+        <img src="../assets/imagenes/salados/empanadas.png" alt="Empanadas">
+        <div class="precio-postre">S/ 30.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos-salados.html?id=6'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">TRIPLES</div>
+        <img src="../assets/imagenes/salados/triple.png" alt="Triples">
+        <div class="precio-postre">S/ 30.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos-salados.html?id=7'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">MINI PANES</div>
+        <img src="../assets/imagenes/salados/pitipan.png" alt="Mini Panes">
+        <div class="precio-postre">S/ 29.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos-salados.html?id=8'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script src="../script/salados.js"></script>
 
 </body>
 </html>

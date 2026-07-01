@@ -80,9 +80,9 @@ const postres = {
         descripcion:"Mini dupla de postres , ideal para compartir con tu amigo pareja.",
         porcion:5,
         completo:22
-    }
+    },
 
-};
+}
 
 const parametros = new URLSearchParams(window.location.search);
 
@@ -105,3 +105,4 @@ if(postre){
     document.getElementById("precioCompleto").textContent="Completo — S/ "+postre.completo.toFixed(2);
 
 }  
+
