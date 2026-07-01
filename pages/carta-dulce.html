@@ -4,102 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Cakes — Carta Dulce</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body class="carta">
 
-    <!-- ====== NAVEGACIÓN ====== -->
-    <header>
-        <nav>
-            <span class="nav-logo"> 
-                <img src="../assets/imagenes/banners/Logo SweetCakesog.jpeg" alt="Mascota SweetCakes"> Sweet Cakes
-            </span>
-            <input type="text" placeholder="Buscar postres...">
-            <div class="nav-links">
-                <a href="registrado.html">Inicio</a>
-                <a href="carta-salada.html">Carta Salada</a>
-                <a href="carta-dulce.html" class="activo">Carta Dulce</a>
-                <a href="carrito.html">🛒 Carrito</a>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <span class="nav-logo">🍰 Sweet Cakes</span>
 
-    <h1>CARTA DE POSTRES DULCES</h1>
+        <input type="text" placeholder="Buscar postres...">
 
-    <!-- ====== CUADRÍCULA DE PRODUCTOS ====== -->
-    <div class="cuadricula-postres">
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">TORTA DE CHOCOLATE</div>
-            <img src="../assets/imagenes/dulces/tortacgococlate.png" alt="Torta de Chocolate">
-            <div class="precio-postre">S/ 34.00</div>
+        <div class="nav-links">
+            <a href="registrado.html">Inicio</a>
+            <a href="carta-salada.html">Carta Salada</a>
+            <a href="carta-dulce.html" class="activo">Carta Dulce</a>
+            <a href="carrito.html">🛒 Carrito</a>
         </div>
+    </nav>
+</header>
 
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">TORTA DE MARACUYÁ</div>
-            <img src="../assets/imagenes/dulces/pastelmaracuya.png" alt="Torta de Maracuyá">
-            <div class="precio-postre">S/ 38.00</div>
+<h1>CARTA DE POSTRES DULCES</h1>
+
+<div class="cuadricula-postres">
+
+    <!-- 1 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">TORTA DE CHOCOLATE</div>
+        <img src="../assets/imagenes/dulces/tortacgococlate.png" alt="Torta de Chocolate">
+        <div class="precio-postre">S/ 34.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=1'">
+                Ver detalle
+            </button>
         </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">PIE DE LIMÓN</div>
-            <img src="../assets/imagenes/dulces/pie_pedido.jpg" alt="Pie de Limón">
-            <div class="precio-postre">S/ 40.00</div>
-            <div class="contenedor-tarjeta-visual">
-                <button class="boton-ver" onclick="window.location.href='pedidos.html'">Ver detalle</button>
-            </div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">CHEESECAKE DE FRUTOS</div>
-            <img src="../assets/imagenes/dulces/cheescake.png" alt="Cheesecake de Frutos">
-            <div class="precio-postre">S/ 39.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">KEKE DE NARANJA</div>
-            <img src="../assets/imagenes/dulces/keke.png" alt="Keke de Naranja">
-            <div class="precio-postre">S/ 29.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">TORTA HELADA</div>
-            <img src="../assets/imagenes/dulces/tortahelada.png" alt="Torta Helada">
-            <div class="precio-postre">S/ 34.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">TORTA TRES LECHES</div>
-            <img src="../assets/imagenes/dulces/tortatresleches.png" alt="Torta Tres Leches">
-            <div class="precio-postre">S/ 34.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">TRUFAS</div>
-            <img src="../assets/imagenes/dulces/trufas.png" alt="Trufas">
-            <div class="precio-postre">S/ 34.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">PIONONO</div>
-            <img src="../assets/imagenes/dulces/pionono.png" alt="Pionono">
-            <div class="precio-postre">S/ 27.00</div>
-        </div>
-
-        <div class="tarjeta-postre">
-            <div class="nombre-postre">MINI DUPLA</div>
-            <img src="../assets/imagenes/dulces/dupla dulce.png" alt="Mini Dupla">
-            <div class="precio-postre">S/ 22.00</div>
-        </div>
-
     </div>
 
-    <!-- Botón volver centrado -->
-    <nav>
-        <button onclick="window.location.href='registrado.html'">← Volver</button>
-    </nav>
+    <!-- 2 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">TORTA DE MARACUYÁ</div>
+        <img src="../assets/imagenes/dulces/pastelmaracuya.png" alt="Torta de Maracuyá">
+        <div class="precio-postre">S/ 38.00</div>
 
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=2'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">PIE DE LIMÓN</div>
+        <img src="../assets/imagenes/dulces/pie_pedido.jpg" alt="Pie de Limón">
+        <div class="precio-postre">S/ 40.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=3'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">CHEESECAKE DE FRUTOS</div>
+        <img src="../assets/imagenes/dulces/cheescake.png" alt="Cheesecake">
+        <div class="precio-postre">S/ 39.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=4'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">KEKE DE NARANJA</div>
+        <img src="../assets/imagenes/dulces/keke.png" alt="Keke de Naranja">
+        <div class="precio-postre">S/ 29.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=5'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">TORTA HELADA</div>
+        <img src="../assets/imagenes/dulces/tortahelada.png" alt="Torta Helada">
+        <div class="precio-postre">S/ 34.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=6'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">TORTA TRES LECHES</div>
+        <img src="../assets/imagenes/dulces/tortatresleches.png" alt="Torta Tres Leches">
+        <div class="precio-postre">S/ 34.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=7'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">TRUFAS</div>
+        <img src="../assets/imagenes/dulces/trufas.png" alt="Trufas">
+        <div class="precio-postre">S/ 34.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=8'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">PIONONO</div>
+        <img src="../assets/imagenes/dulces/pionono.png" alt="Pionono">
+        <div class="precio-postre">S/ 27.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=9'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="tarjeta-postre">
+        <div class="nombre-postre">MINI DUPLA</div>
+        <img src="../assets/imagenes/dulces/dupla dulce.png" alt="Mini Dupla">
+        <div class="precio-postre">S/ 22.00</div>
+
+        <div class="contenedor-tarjeta-visual">
+            <button class="boton-ver" onclick="location.href='pedidos.html?id=10'">
+                Ver detalle
+            </button>
+        </div>
+    </div>
+
+</div>
+<script src="postres.js"></script>
 </body>
 </html>
