@@ -1,71 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Cakes — Iniciar Sesión</title>
+    <title>Sweet Cakes | Login</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
 
-    <!-- ====== PÁGINA DE LOGIN ====== -->
-    <div class="pagina-auth">
-        <div class="login-box">
+<div class="pagina-auth">
 
-            <!-- Cabecera verde -->
-            <div class="login-header">
-                <h1>🍰 Sweet Cakes</h1>
-            </div>
+    <div class="login-box">
 
-            <!-- Contenido del formulario -->
-            <div class="login-content">
+        <!-- Encabezado -->
+        <div class="login-header">
+            <h1>🍰 Sweet Cakes</h1>
+        </div>
+
+        <div class="login-content">
+
+            <!-- ================= LOGIN ================= -->
+            <div id="loginForm">
 
                 <a href="../index.html" class="btn-atras">← Volver al inicio</a>
 
-                <div>
-                    <p style="font-family:var(--fuente-titulo); font-size:1.3rem; color:var(--color-texto); font-weight:700;">¡Bienvenid@!</p>
-                    <p style="font-size:0.88rem; color:var(--color-texto-suave);">Inicia sesión para continuar</p>
-                </div>
+                <h2>¡Bienvenid@!</h2>
+                <p>Inicia sesión para continuar.</p>
 
-                <!-- Correo -->
                 <div class="input-group">
                     <label for="email">Correo electrónico</label>
                     <input type="email" id="email" placeholder="correo@ejemplo.com">
                 </div>
 
-                <!-- Contraseña -->
                 <div class="input-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="Tu contraseña">
+                <label for="password">Contraseña</label>
+
+                <div class="password-box">
+                <input type="password" id="password" placeholder="Mínimo 8 caracteres">
+                <span class="toggle-pass" onclick="mostrarPassword('password',this)">👁️</span>
                 </div>
 
-                <!-- Botón principal -->
-                <button class="login-btn" onclick="validarLogin()">Iniciar sesión</button>
+</div>
 
-                <!-- Botón Google -->
-                <button class="google-btn">🔵 Continuar con Google</button>
+                <button class="login-btn" onclick="validarLogin()">
+                    Iniciar sesión
+                </button>
 
-                <p style="font-size:0.8rem; text-align:center; color:var(--color-texto-suave);">
-                    ¿No tienes cuenta? <a href="#" style="color:var(--color-cereza); font-weight:700;">Regístrate aquí</a>
+                <button class="google-btn" onclick="loginGoogle()">
+                    🔵 Continuar con Google
+                </button>
+
+                <p class="texto-link">
+                    ¿No tienes cuenta?
+                    <a href="#" onclick="mostrarRegistro()">Regístrate aquí</a>
                 </p>
 
             </div>
+
+            <!-- ================= REGISTRO ================= -->
+            <div id="registroForm" style="display:none;">
+
+                <a href="../index.html" class="btn-atras">← Volver al inicio</a>
+
+                <h2>Crear cuenta</h2>
+                <p>Completa tus datos para registrarte.</p>
+
+                <div class="input-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Nombre completo">
+                </div>
+
+                <div class="input-group">
+                    <label for="correoRegistro">Correo electrónico</label>
+                    <input type="email" id="correoRegistro" placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="input-group">
+                <label for="passwordRegistro">Contraseña</label>
+                <div class="password-box">
+                <input type="password" id="passwordRegistro" placeholder="Mínimo 8 caracteres">
+                <span class="toggle-pass" onclick="mostrarPassword('passwordRegistro',this)">👁️</span>
+                </div>
+
+</div>
+
+                <div class="input-group">
+                <label for="confirmarPassword">Confirmar contraseña</label>
+                <div class="password-box">
+                <input type="password" id="confirmarPassword" placeholder="Repite tu contraseña">
+                <span class="toggle-pass" onclick="mostrarPassword('confirmarPassword',this)">👁️</span>
+                </div>
+
+</div>
+
+                <button class="login-btn" onclick="registrarUsuario()">
+                    Registrarse
+                </button>
+
+                <button class="google-btn" onclick="registroGoogle()">
+                    🔵 Registrarse con Google
+                </button>
+
+                <p class="texto-link">
+                    ¿Ya tienes cuenta?
+                    <a href="#" onclick="mostrarLogin()">Inicia sesión</a>
+                </p>
+
+            </div>
+
         </div>
+
     </div>
 
-    <script>
-        function validarLogin() {
-            const email = document.getElementById('email').value;
-            const pass  = document.getElementById('password').value;
-            if (email !== "" && pass !== "") {
-                window.location.href = "registrado.html";
-            } else {
-                alert("Por favor, completa ambos campos para continuar.");
-            }
-        }
-    </script>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<!-- JavaScript -->
+<script src="../js/main.js"></script>
 
 </body>
 </html>

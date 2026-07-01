@@ -1,8 +1,8 @@
 /* ================================================================
-   SWEET CAKES — Estilos unificados
-   Páginas: index, registrado, cartas, carrito, checkout,
-            pedidos, login, contactos, datos-personales
-   ================================================================ */
+SWEET CAKES — Estilos unificados
+Páginas: index, registrado, cartas, carrito, checkout,
+pedidos, login, contactos, datos-personales
+================================================================ */
 
 /* === 1. VARIABLES ============================================== */
 :root {
@@ -43,6 +43,38 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Estado inicial (oculto) */
+.toast{
+    position: fixed;          /* Siempre visible en la pantalla */
+    bottom: 20px;             /* Separación desde abajo */
+    right: 20px;              /* Separación desde la derecha */
+
+    background: #e74c3c;      /* Color rojo */
+    color: white;             /* Texto blanco */
+
+    padding: 15px 20px;       /* Espaciado interno */
+    border-radius: 10px;      /* Bordes redondeados */
+
+    font-size: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+
+    opacity: 0;               /* Invisible */
+    visibility: hidden;
+    transform: translateY(20px); /* Un poco más abajo */
+
+    transition: .3s;          /* Animación */
+
+    z-index: 9999;            /* Siempre encima de todo */
+}
+
+/* Cuando se muestra */
+.toast.mostrar{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Sube suavemente */
 }
 
 img { display:block; max-width:100%; height:auto; }
@@ -426,14 +458,14 @@ body.carta nav { display:flex; justify-content:center; margin:10px 0 30px; }
     background: var(--blanco);
     border-radius: var(--r-card);
     box-shadow: var(--sombra-hover);
-    width: min(400px, 100%);
+    width: min(460px, 100%);
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 .login-header { background:var(--verde); padding:20px; text-align:center; }
 .login-header h1 { font-family:var(--f-titulo); font-size:1.4rem; color:var(--texto); margin:0; }
-.login-content { padding:30px; display:flex; flex-direction:column; gap:18px; }
+.login-content { padding:30px; display:flex; flex-direction:column; gap:18px;}
 
 .input-group label {
     display: block;
@@ -442,10 +474,11 @@ body.carta nav { display:flex; justify-content:center; margin:10px 0 30px; }
     text-transform: uppercase;
     letter-spacing: .6px;
     color: var(--texto-s);
-    margin-bottom: 6px;
+    margin-bottom:7px;
 }
 
-.login-btn  { background:var(--cereza); color:var(--blanco); padding:13px; font-size:.9rem; }
+.login-btn  { background:var(--cereza); color:var(--blanco); padding:13px; font-size:.9rem; margin-top:10px;
+margin-bottom:15px;}
 .login-btn:hover  { background:var(--cereza-dark); transform:none; }
 
 .google-btn { background:var(--blanco); border:1.5px solid var(--borde); color:var(--texto); padding:11px; font-size:.82rem; }
@@ -489,7 +522,63 @@ body#pagina-datos {
 
 #pagina-datos form a button { display:flex; align-items:center; gap:8px; border-radius:var(--r-input); padding:10px 20px; margin-top:6px; }
 #pagina-datos form a button img { width:20px; height:20px; object-fit:contain; }
+/*====================================================
+        LOGIN Y REGISTRO
+====================================================*/
 
+#loginForm,
+#registroForm{
+    width:100%;
+    animation:fade .35s ease;
+}
 
+.texto-link{
+    text-align:center;
+    font-size:.82rem;
+    margin-top:10px;
+}
 
+.texto-link a{
+    color:var(--color-cereza);
+    font-weight:700;
+    text-decoration:none;
+}
 
+.texto-link a:hover{
+    text-decoration:underline;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/*========================
+OJITO CONTRASEÑA
+=========================*/
+.password-box{
+    position:relative;
+}
+.password-box input{
+    width:100%;
+    padding-right:45px;
+}
+.toggle-pass{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    user-select:none;
+    font-size:18px;
+    opacity:.7;
+    transition:.3s;
+}
+.toggle-pass:hover{
+    opacity:1;
+}
