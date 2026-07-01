@@ -28,7 +28,7 @@ const postres = {
 
     4:{
         nombre:"CHEESECAKE DE FRUTOS",
-        imagen:"../assets/imagenes/dulces/cheescake.png",
+        imagen:"../assets/imagenes/dulces/cheescake.jpg",
         descripcion:"Cheesecake cremoso sabor vainilla con una base de galleta maria suave y con frutos rojos de temporada.",
         porcion:9,
         completo:39
@@ -52,7 +52,7 @@ const postres = {
 
     7:{
         nombre:"TORTA TRES LECHES",
-        imagen:"../assets/imagenes/dulces/tortatresleches.png",
+        imagen:"../assets/imagenes/dulces/tortatresleches.jpg",
         descripcion:"Bizcocho de vainilla bañado en tres leches dulce, con chantilli de decoracion .",
         porcion:8,
         completo:34
