@@ -32,22 +32,27 @@
         <div style="flex:1; display:flex; flex-direction:column; gap:24px;">
 
             <h2 style="font-family:var(--fuente-titulo); color:var(--color-cereza); font-size:1.5rem;">
-                Tu Carrito de Compras
+                Tu Carrito de Compras de hoy
             </h2>
 
-            <!-- Tabla de ítems -->
-            <table class="tabla-carrito">
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Total</th>
-                    </tr>
+        <!-- Tabla de ítems -->
+     <table class="tabla-carrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
                 </thead>
                 <tbody id="cuerpo-carrito">
                 </tbody>
-            </table>
+    </table>
+      <p class="total"><span>Total</span><span id="resumen-total">S/ 0.00</span></p>
+            <button onclick="window.location.href='checkout.html'">Proceder al Pago</button>
+            <button onclick="window.location.href='registrado.html'" style="background:transparent; color:var(--color-cereza); border:1.5px solid var(--color-cereza);">Seguir Comprando</button>
+        </div>
+
 
             <!-- Recomendados -->
             <div style="background:var(--color-blanco); border:1.5px solid var(--color-rosa-claro); border-radius:var(--radio-card); padding:18px; box-shadow:var(--sombra-card);">
@@ -68,19 +73,7 @@
 
         </div>
 
-        <!-- Columna derecha: resumen del pedido -->
-        <div class="resumen-pedido">
-            <h3>Resumen del Pedido</h3>
-            <hr>
-            <p><span>Subtotal (<span id="resumen-items">0</span> items)</span><strong id="resumen-subtotal">S/ 0.00</strong></p>
-            <p><span>Envío estimado</span><strong id="resumen-envio">S/ 0.00</strong></p>
-            <p><span>Descuento</span><strong>− S/ 0.00</strong></p>
-            <hr>
-            <p class="total"><span>Total</span><span id="resumen-total">S/ 0.00</span></p>
-            <button onclick="window.location.href='checkout.html'">Proceder al Pago</button>
-            <button onclick="window.location.href='registrado.html'" style="background:transparent; color:var(--color-cereza); border:1.5px solid var(--color-cereza);">Seguir Comprando</button>
-        </div>
-
+        
     </div>
 
     <!-- ====== PIE DE PÁGINA ====== -->

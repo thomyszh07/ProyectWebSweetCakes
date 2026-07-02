@@ -357,12 +357,12 @@ body.carta nav { display:flex; justify-content:center; margin:10px 0 30px; }
     width: 100%;
     flex-grow: 1;
 }
-.tabla-carrito { width:100%; border-collapse:collapse; font-size:.9rem; }
+.tabla-carrito { width:90%; border-collapse:collapse; font-size:.9rem; }
 .tabla-carrito th {
     background: var(--rosa-claro);
     color: var(--texto);
     padding: 10px 12px;
-    text-align: left;
+    text-align: center;
     font-size: .8rem;
     letter-spacing: .5px;
     text-transform: uppercase;
