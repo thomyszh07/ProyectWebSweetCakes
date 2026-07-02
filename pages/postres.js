@@ -106,3 +106,44 @@ if(postre){
 
 }  
 
+// ====== Conectar botón "Añadir al Carrito" ======
+const btnAgregar = document.getElementById("btnAgregar");
+
+if (btnAgregar && postre) {
+    btnAgregar.addEventListener("click", () => {
+        const cantidadPorcion = parseInt(document.getElementById("cantidadPorcion").value) || 0;
+        const cantidadCompleto = parseInt(document.getElementById("cantidadCompleto").value) || 0;
+
+        if (cantidadPorcion <= 0 && cantidadCompleto <= 0) {
+            alert("Elige al menos una cantidad antes de agregar al carrito.");
+            return;
+        }
+
+        if (cantidadPorcion > 0) {
+            agregarAlCarrito({
+                id: id + "-porcion",
+                nombre: postre.nombre,
+                imagen: postre.imagen,
+                tipo: "Porción",
+                precio: postre.porcion,
+                cantidad: cantidadPorcion
+            });
+        }
+
+        if (cantidadCompleto > 0) {
+            agregarAlCarrito({
+                id: id + "-completo",
+                nombre: postre.nombre,
+                imagen: postre.imagen,
+                tipo: "Completo",
+                precio: postre.completo,
+                cantidad: cantidadCompleto
+            });
+        }
+
+        // Actualiza el resumen de la derecha (pedido/total)
+        const totalPedido = (cantidadPorcion * postre.porcion) + (cantidadCompleto * postre.completo);
+        document.getElementById("pedido").value = postre.nombre;
+        document.getElementById("total").value = "S/ " + totalPedido.toFixed(2);
+    });
+}

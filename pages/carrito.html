@@ -45,52 +45,7 @@
                         <th>Total</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="../assets/imagenes/dulces/keke.png" alt="Keke" width="55" height="42" style="border-radius:6px; display:inline-block; margin-right:10px; vertical-align:middle;">
-                            <strong>Keke de Naranja</strong>
-                            <br><small style="color:var(--color-texto-suave)">Postre clásico</small>
-                            <br><button style="margin-top:6px; padding:4px 12px; font-size:0.72rem; background:transparent; color:var(--color-cereza); border:1px solid var(--color-cereza); border-radius:20px;">Eliminar</button>
-                        </td>
-                        <td style="text-align:center">S/ 29.00</td>
-                        <td style="text-align:center">
-                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">−</button>
-                            &nbsp;1&nbsp;
-                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">+</button>
-                        </td>
-                        <td style="text-align:center; font-weight:700; color:var(--color-cereza)">S/ 29.00</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../assets/imagenes/salados/cuernitos.png" alt="Croissants" width="55" height="42" style="border-radius:6px; display:inline-block; margin-right:10px; vertical-align:middle;">
-                            <strong>Croissants</strong>
-                            <br><small style="color:var(--color-texto-suave)">Postre salado</small>
-                            <br><button style="margin-top:6px; padding:4px 12px; font-size:0.72rem; background:transparent; color:var(--color-cereza); border:1px solid var(--color-cereza); border-radius:20px;">Eliminar</button>
-                        </td>
-                        <td style="text-align:center">S/ 8.00</td>
-                        <td style="text-align:center">
-                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">−</button>
-                            &nbsp;1&nbsp;
-                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">+</button>
-                        </td>
-                        <td style="text-align:center; font-weight:700; color:var(--color-cereza)">S/ 8.00</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../assets/imagenes/dulces/trufas.png" alt="Trufas" width="55" height="42" style="border-radius:6px; display:inline-block; margin-right:10px; vertical-align:middle;">
-                            <strong>Trufas</strong>
-                            <br><small style="color:var(--color-texto-suave)">Individual</small>
-                            <br><button style="margin-top:6px; padding:4px 12px; font-size:0.72rem; background:transparent; color:var(--color-cereza); border:1px solid var(--color-cereza); border-radius:20px;">Eliminar</button>
-                        </td>
-                        <td style="text-align:center">S/ 34.00</td>
-                        <td style="text-align:center">
-                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">−</button>
-                            &nbsp;2&nbsp;
-                            <button style="padding:4px 10px; border-radius:20px; background:var(--color-rosa-claro); color:var(--color-texto);">+</button>
-                        </td>
-                        <td style="text-align:center; font-weight:700; color:var(--color-cereza)">S/ 68.00</td>
-                    </tr>
+                <tbody id="cuerpo-carrito">
                 </tbody>
             </table>
 
@@ -117,11 +72,11 @@
         <div class="resumen-pedido">
             <h3>Resumen del Pedido</h3>
             <hr>
-            <p><span>Subtotal (4 items)</span><strong>S/ 105.00</strong></p>
-            <p><span>Envío estimado</span><strong>S/ 10.00</strong></p>
+            <p><span>Subtotal (<span id="resumen-items">0</span> items)</span><strong id="resumen-subtotal">S/ 0.00</strong></p>
+            <p><span>Envío estimado</span><strong id="resumen-envio">S/ 0.00</strong></p>
             <p><span>Descuento</span><strong>− S/ 0.00</strong></p>
             <hr>
-            <p class="total"><span>Total</span><span>S/ 115.00</span></p>
+            <p class="total"><span>Total</span><span id="resumen-total">S/ 0.00</span></p>
             <button onclick="window.location.href='checkout.html'">Proceder al Pago</button>
             <button onclick="window.location.href='registrado.html'" style="background:transparent; color:var(--color-cereza); border:1.5px solid var(--color-cereza);">Seguir Comprando</button>
         </div>
@@ -132,6 +87,8 @@
     <footer class="footer">
         <p>© 2026 Sweet Cakes · Lima, Perú</p>
     </footer>
+
+    <script src="../script/carrito.js"></script>
 
 </body>
 </html>
