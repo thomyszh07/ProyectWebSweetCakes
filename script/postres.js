@@ -4,7 +4,7 @@ const postres = {
 
     1:{
         nombre:"TORTA DE CHOCOLATE",
-        imagen:"../assets/imagenes/dulces/tortacgococlate.png",
+        imagen:"../assets/imagenes/dulces/tortachoco2.webp",
         descripcion:"Deliciosa torta húmeda de chocolate amargo con relleno de manjar blanco y canela rallada de decoración.",
         porcion:8,
         completo:34
@@ -12,7 +12,7 @@ const postres = {
 
     2:{
         nombre:"TORTA DE MARACUYÁ",
-        imagen:"../assets/imagenes/dulces/pastelmaracuya.png",
+        imagen:"../assets/imagenes/dulces/tortamaracuya2.png",
         descripcion:"Bizcocho de vainilla rellena con crema de maracuyá acida y chantilly sabor maracuya.",
         porcion:9,
         completo:38

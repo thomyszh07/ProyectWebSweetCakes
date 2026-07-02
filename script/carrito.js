@@ -87,3 +87,40 @@ function renderizarCarrito() {
 }
 
 document.addEventListener("DOMContentLoaded", renderizarCarrito);
+
+//PARTE DE BUSQUEDA
+
+document.addEventListener("DOMContentLoaded", () => {
+    const buscadores = document.querySelectorAll('input[placeholder*="Buscar"]');
+    const tarjetas = document.querySelectorAll(".tarjeta-postre, .tarjeta-salada");
+
+    console.log("¡JavaScript cargado con éxito!");
+    console.log(`Buscadores detectados: ${buscadores.length}`);
+    console.log(`Tarjetas detectadas: ${tarjetas.length}`);
+
+    if (buscadores.length === 0) return;
+
+    buscadores.forEach((buscador) => {
+        buscador.addEventListener("input", (evento) => {
+            const textoUsuario = evento.target.value.toLowerCase().trim();
+
+            buscadores.forEach(b => {
+                if (b !== evento.target) b.value = evento.target.value;
+            });
+
+            tarjetas.forEach((tarjeta) => {
+                const elementoNombre = tarjeta.querySelector(".nombre-postre, .nombre-salada");
+                
+                if (elementoNombre) {
+                    const nombreTexto = elementoNombre.textContent.toLowerCase();
+                    
+                    if (nombreTexto.includes(textoUsuario)) {
+                        tarjeta.style.display = ""; // Muestra
+                    } else {
+                        tarjeta.style.display = "none"; // Oculta
+                    }
+                }
+            });
+        });
+    });
+});
