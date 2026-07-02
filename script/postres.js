@@ -59,9 +59,9 @@ const postres = {
     },
 
     8:{
-        nombre:"TRUFAS",
-        imagen:"../assets/imagenes/dulces/trufas.png",
-        descripcion:"Trufas artesanales de galleta tentacion de chocolate bañados en chocolate amargo.",
+        nombre:"FLAN",
+        imagen:"../assets/imagenes/dulces/flan.webp",
+        descripcion:"Fina y delicada masa de bizcocho enrollada a la perfección, rellena de una suave crema. Un clásico de la repostería con la textura ideal para derretirse en tu boca.",
         porcion:5,
         completo:34
     },
@@ -75,9 +75,9 @@ const postres = {
     },
 
     10:{
-        nombre:"MINI DUPLA",
-        imagen:"../assets/imagenes/dulces/dupla dulce.png",
-        descripcion:"Mini dupla de postres , ideal para compartir con tu amigo pareja.",
+        nombre:"TORTA IMPOSIBLE",
+        imagen:"../assets/imagenes/dulces/imposible2.webp",
+        descripcion:"Un postre de dos sabores , flan y keke de chocolate bañado en caramelo de azucar.",
         porcion:5,
         completo:22
     },
