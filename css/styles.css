@@ -334,6 +334,17 @@ body.carta nav { display:flex; justify-content:center; margin:10px 0 30px; }
     font-size: .9rem;
     letter-spacing: .5px;
 }
+.btn-rosa0 {
+    background: #e74c3c;
+    color: var(--blanco);
+    border-radius: var(--r-btn);
+    padding: 12px 0;
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 16px;
+    font-size: .9rem;
+    letter-spacing: .5px;
+}
 .btn-rosa:hover { background: var(--cereza-dark); }
 
 /* === 8. CARRITO =============================================== */
