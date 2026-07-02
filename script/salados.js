@@ -2,7 +2,7 @@ const salados={
 1:{
     nombre:"EMPANADAS JAMÓN Y QUESO",
     imagen:"../assets/imagenes/salados/jamonadayqueso0.png",
-    descripcion:"Empanadas horneadas rellenas de jamón y queso, ideales para compartir.",
+    descripcion:"Panes artesanales horneados rellenas de jamón y queso, ideales para compartir.",
     docena:20
    },
 
@@ -23,32 +23,32 @@ const salados={
 4:{
     nombre:"CHOCOBOYO",
     imagen:"../assets/imagenes/salados/chocoboyo.png",
-    descripcion:"Mini panes rellenos de pollo deshilachado con mayonesa y lechuga fresca.",
+    descripcion:"Panes de mantequilla con chispas de chocolate amargo sabor feestable .",
     docena:25
   },
 
 5:{
     nombre:"CROISSANTS",
     imagen:"../assets/imagenes/salados/cuernitos.png",
-    descripcion:"Mini panes rellenos de pollo deshilachado con mayonesa y lechuga fresca.",
+    descripcion:"Croissants con una capa de mantquilla relleno de queso salado.",
     docena:40
   },
 6:{
     nombre:"EMPANADAS",
     imagen:"../assets/imagenes/salados/empanadas.png",
-    descripcion:"Mini panes rellenos de pollo deshilachado con mayonesa y lechuga fresca.",
+    descripcion:"Empanadas venezolanas rellenas de carne picante y queso de relleno derretido .",
     docena:30
   },
 7:{
     nombre:"TRIPLES",
     imagen:"../assets/imagenes/salados/triple.png",
-    descripcion:"Mini panes rellenos de pollo deshilachado con mayonesa y lechuga fresca.",
+    descripcion:"Pan de molde blanco con relleno de jamon , queso , palta y pollo en trozos + mayonesa .",
     docena:30
   },
 8:{
     nombre:"MINI PANES",
     imagen:"../assets/imagenes/salados/pitipan.png",
-    descripcion:"Mini panes rellenos de pollo deshilachado con mayonesa y lechuga fresca.",
+    descripcion:"Mini panes estilo croissants rellenos de pollo deshilachado con mayonesa y lechuga fresca.",
     docena:29
   },
 }
