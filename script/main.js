@@ -42,8 +42,10 @@ function validarLogin(){
 
     mostrarToast("Inicio de sesión exitoso.");
 
+    localStorage.setItem("sesion","true");
+
     setTimeout(()=>{
-        window.location.href="registrado.html";
+    window.location.href="../index.html";
     },1500);
 
 }

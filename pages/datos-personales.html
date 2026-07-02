@@ -39,13 +39,24 @@
         </div>
 
         <!-- Botón cerrar sesión -->
-        <a href="../index.html">
-            <button type="button" style="margin-top:10px; background:var(--color-cereza); color:var(--color-blanco); border-radius:var(--radio-btn);">
-                <img src="../assets/imagenes/usuarios/salida-de-emergencia.png" alt="Salir" style="width:18px;height:18px;object-fit:contain;">
-                Cerrar Sesión
-            </button>
-        </a>
+        <button type="button"
+                onclick="cerrarSesion()"
+                style="margin-top:10px; background:var(--color-cereza); color:var(--color-blanco); border-radius:var(--radio-btn);">
+
+            <img src="../assets/imagenes/usuarios/salida-de-emergencia.png"
+                alt="Salir"
+                style="width:18px;height:18px;object-fit:contain;">
+
+            Cerrar Sesión
+        </button>
     </form>
+
+    <script>
+        function cerrarSesion() {
+            localStorage.removeItem("sesion");
+            window.location.href = "../index.html";
+        }
+    </script>
 
 </body>
 </html>
