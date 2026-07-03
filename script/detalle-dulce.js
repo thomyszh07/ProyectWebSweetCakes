@@ -128,7 +128,7 @@ if (btnAgregar && postre) {
                 precio: postre.porcion,
                 cantidad: cantidadPorcion
             });
-        }
+        } 
 
         if (cantidadCompleto > 0) {
             agregarAlCarrito({

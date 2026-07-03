@@ -27,7 +27,7 @@ const salados = {
         imagen: "../assets/imagenes/salados/chocoboyo.png",
         descripcion: "Pan dulce con chispas de chocolate.",
         docena: 20
-    },
+    },  
 
     5: {
         nombre: "CROISSANTS",
