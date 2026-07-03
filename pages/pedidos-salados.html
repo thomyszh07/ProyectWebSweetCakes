@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Cakes - Detalle</title>
+    <title>Detalle Salado</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -13,69 +13,77 @@
 
 <body class="pedido-postre">
 
-    <button class="btn-volver" onclick="history.back()">
+    <button class="btn-volver" onclick="window.location.href='carta-salada.html'">
         ← Volver
     </button>
 
-    <div class="container-detalle">
+<div class="container-detalle">
 
-        <div class="columna-izquierda">
+    <!-- IZQUIERDA -->
+    <div class="columna-izquierda">
 
-            <div class="titulo-caja">
-                <h1 id="nombrePostre"></h1>
-            </div>
-
-            <div class="imagen-caja">
-                <img id="imagenPostre" src="" alt="">
-            </div>
-
+        <div class="titulo-caja">
+            <h1 id="nombrePostre"></h1>
         </div>
 
-        <div class="columna-derecha">
-
-            <h2 style="color:var(--color-cereza);font-family:var(--fuente-titulo);">
-                Descripción
-            </h2>
-
-            <p id="descripcionPostre"
-               style="color:var(--color-texto-suave);margin-bottom:18px;">
-            </p>
-
-            <h2 style="color:var(--color-cereza);font-family:var(--fuente-titulo);">
-                Especificaciones
-            </h2>
-
-            <ul style="list-style:none;padding:0;font-weight:700;margin-bottom:20px;color:var(--color-texto-suave);">
-                <li>— Una Docena (Disponible en todo menos pizza)</li>
-                <li>— Porcion entera (Solo disponibles en pizzas)</li>
-            </ul>
-
-          <div class="fila-precio" style="display:flex; justify-content:flex-start; align-items:center; gap:15px;">
-    <label id="precioPorcion"></label>
-    <input type="number" value="1" min="0">
-</div>
-        <div class="campo-bloque">
-                    <label>Total:</label>
-                    <input id="total" type="text" readonly value="S/ 0.00">
-                </div>
-
-          
-
-            <button class="btn-rosa0">
-                Añadir al Carrito
-            </button>
-
-
-            <button class="btn-rosa"
-            onclick="window.location.href='checkout.html'">
-                Ir a Pagar
-            </button>
-
+        <div class="imagen-caja">
+            <img id="imagenPostre" src="" alt="">
         </div>
 
     </div>
 
- <script src="../script/salados.js"></script>
+    <!-- DERECHA -->
+    <div class="columna-derecha">
+
+        <h2 style="color:var(--color-cereza);font-family:var(--fuente-titulo);">
+            Descripción
+        </h2>
+
+        <p id="descripcionPostre"
+           style="color:var(--color-texto-suave);margin-bottom:18px;">
+        </p>
+
+        <h2 style="color:var(--color-cereza);font-family:var(--fuente-titulo);">
+            Especificaciones
+        </h2>
+
+        <ul style="list-style:none;padding:0;font-weight:700;margin-bottom:20px;color:var(--color-texto-suave);">
+            <li>— Producto disponible por docena o unidad según el caso</li>
+        </ul>
+
+        <!-- PRECIO -->
+        <div class="fila-precio">
+            <label id="precioDocena"></label>
+        </div>
+
+        <!-- CANTIDAD -->
+        <div class="fila-precio">
+            <label>Cantidad</label>
+            <input id="cantidad" type="number" value="1" min="0">
+        </div>
+
+        <!-- TOTAL -->
+        <div class="campo-bloque">
+            <label>Total:</label>
+            <input id="total" type="text" readonly value="S/ 0.00">
+        </div>
+
+        <!-- BOTONES -->
+        <button class="btn-rosa0" id="btnAgregar">
+            Añadir al Carrito
+        </button>
+
+        <button class="btn-rosa"
+            onclick="window.location.href='checkout.html'">
+            Ir a Pagar
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../script/carrito.js"></script>
+<script src="../script/salados.js"></script>
 
 </body>
-</html>  
+</html>
