@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cakes — Datos Personales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="pagina-datos">
+
+    <!-- Botón volver arriba a la izquierda -->
+    <div class="navegacion-superior">
+        <button onclick="history.back()" class="btn-atras" style="background:var(--color-boton); color:var(--color-blanco); border-radius:var(--radio-btn);">
+            ← Volver
+        </button>
+    </div>
+
+    <!-- Encabezado de perfil -->
+    <div class="encabezado-perfil">
+        <img
+            id="fotoPerfil"
+            src="../assets/imagenes/usuarios/usuario.png"
+            alt="Foto de perfil">
+        <h2>Mi Perfil</h2>
+        <button type="button" id="btnCambiarFoto">
+            Cambiar foto
+        </button>
+
+        <input type="file" id="inputFoto" accept="image/*" hidden>
+    </div>
+
+    <!-- Formulario -->
+    <form id="formPerfil">
+
+        <div>
+            <label>Nombre de usuario</label>
+            <input
+                type="text"
+                id="nombreUsuario"
+                placeholder="Usuario">
+        </div>
+
+        <div>
+            <label>Correo electrónico</label>
+            <input
+                type="email"
+                id="correo"
+                placeholder="correo@ejemplo.com">
+        </div>
+
+        <div>
+            <label>Teléfono</label>
+            <input
+                type="tel"
+                id="telefono"
+                placeholder="+51 999 999 999">
+        </div>
+
+        <div>
+            <label>Dirección</label>
+            <input
+                type="text"
+                id="direccion"
+                placeholder="Lima, Perú">
+        </div>
+
+        <div>
+            <label>Nueva contraseña</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="********">
+        </div>
+
+        <button
+            type="button"
+            class="btn-guardar">
+
+            Guardar cambios
+
+        </button>
+
+    </form>
+
+<script src="../script/perfil.js"></script>
+
+<div id="toastPerfil" class="toast-perfil"></div>
+</body>
+</html>

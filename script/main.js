@@ -42,10 +42,20 @@ function validarLogin(){
 
     mostrarToast("Inicio de sesión exitoso.");
 
+    const usuario = {
+       nombre: "Usuario",
+       correo: email,
+       telefono: "",
+       direccion: "",
+       foto: "assets/imagenes/usuarios/usuario.png"
+};
+
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+
     localStorage.setItem("sesion","true");
 
     setTimeout(()=>{
-    window.location.href="../index.html";
+        window.location.href="../index.html";
     },1500);
 
 }

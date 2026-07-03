@@ -593,3 +593,103 @@ OJITO CONTRASEÑA
 .toggle-pass:hover{
     opacity:1;
 }
+/*=====================================
+    MENU DE USUARIO
+=====================================*/
+.menu-usuario{
+    position:relative;
+}
+.dropdown-usuario{
+    position:relative;
+}
+.btn-usuario{
+    background:none;
+    border:none;
+    color:var(--texto-s);
+    font-size:.78rem;
+    font-weight:700;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.btn-usuario:hover{
+    background:var(--rosa-claro);
+    color:var(--cereza);
+}
+.dropdown-menu{
+    position:absolute;
+    top:45px;
+    right:0;
+    width:280px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    overflow:hidden;
+    display:none;
+    z-index:9999;
+}
+.dropdown-menu.active{
+    display:block;
+}
+.usuario-info{
+    padding:20px;
+    text-align:center;
+}
+.usuario-info img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:auto;
+    margin-bottom:10px;
+}
+.usuario-info h4{
+    margin-bottom:5px;
+    color:var(--texto);
+}
+.usuario-info p{
+    font-size:.85rem;
+    color:var(--texto-s);
+}
+.dropdown-menu a,
+.dropdown-menu button{
+    width:100%;
+    padding:14px 18px;
+    background:none;
+    border:none;
+    display:flex;
+    align-items:center;
+    text-align:left;
+    font-size:.9rem;
+    color:var(--texto);
+    cursor:pointer;
+}
+.dropdown-menu a:hover,
+.dropdown-menu button:hover{
+    background:var(--fondo);
+}
+/*=====Toast Perfil=======*/
+.toast-perfil{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    background:var(--cereza);
+    color:var(--blanco);
+    padding:14px 22px;
+    border-radius:14px;
+    box-shadow:var(--sombra-hover);
+    font-weight:700;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(20px);
+    transition:.3s;
+    z-index:9999;
+}
+
+.toast-perfil.mostrar{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
