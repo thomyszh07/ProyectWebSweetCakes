@@ -27,7 +27,7 @@ const salados = {
         imagen: "../assets/imagenes/salados/chocoboyo.png",
         descripcion: "Pan dulce con chispas de chocolate.",
         docena: 20
-    },  
+    },
 
     5: {
         nombre: "CROISSANTS",
@@ -58,12 +58,12 @@ const salados = {
     },
 };
 
-// 🔹 Obtener ID de la URL (CORREGIDO)
-  const parametros = new URLSearchParams(window.location.search);
-  const id = parametros.get("id");
-  const producto = salados[id];
+// 🔹 Obtener ID de la URL
+const parametros = new URLSearchParams(window.location.search);
+const id = parametros.get("id");
+const producto = salados[id];
 
-// 🔹 Mostrar producto
+// 🔹 Mostrar producto en el HTML
 if (producto) {
     const nombre = document.getElementById("nombrePostre");
     const imagen = document.getElementById("imagenPostre");
@@ -79,29 +79,54 @@ if (producto) {
 
     if (precio) {
         const valor = producto.docena || producto.completo;
-        precio.textContent = "Docena — S/ " + valor.toFixed(2);
+        const tipoTexto = producto.completo ? "Completo" : "Docena";
+        precio.textContent = tipoTexto + " — S/ " + valor.toFixed(2);
     }
 }
+
+// ====== ACTUALIZACIÓN AUTOMÁTICA DEL TOTAL ======
+const actualizarTotalSalados = () => {
+    if (!producto) return;
+
+    const inputCantidad = document.getElementById("cantidad");
+    const inputTotal = document.getElementById("total");
+
+    if (!inputCantidad || !inputTotal) return;
+
+    const cantidad = parseInt(inputCantidad.value) || 0;
+    const precioUnitario = producto.docena || producto.completo;
+    const total = cantidad * precioUnitario;
+
+    // Actualiza directamente la caja de texto del Total
+    inputTotal.value = "S/ " + total.toFixed(2);
+};
+
+// Escuchamos los cambios en la caja de cantidad al presionar flechas o escribir
+const inputCant = document.getElementById("cantidad");
+if (inputCant) {
+    inputCant.addEventListener("input", actualizarTotalSalados);
+    inputCant.addEventListener("change", actualizarTotalSalados);
+}
+
+// Ejecuta el cálculo automático apenas abre la página (así toma el "1" inicial y muestra su precio real)
+actualizarTotalSalados();
+
 
 // 🔹 Botón agregar al carrito
 const btnAgregar = document.getElementById("btnAgregar");
 
 if (btnAgregar && producto) {
     btnAgregar.addEventListener("click", () => {
-
         const inputCantidad = document.getElementById("cantidad");
-        const inputTotal = document.getElementById("total");
-
         const cantidad = parseInt(inputCantidad?.value) || 0;
 
         if (cantidad <= 0) {
-            alert("Elige una cantidad");
+            alert("Elige una cantidad válida antes de añadir al carrito.");
             return;
         }
 
         const precioUnitario = producto.docena || producto.completo;
 
-        // 🔹 Validar función carrito
         if (typeof agregarAlCarrito === "function") {
             agregarAlCarrito({
                 id: id,
@@ -111,14 +136,11 @@ if (btnAgregar && producto) {
                 precio: precioUnitario,
                 cantidad: cantidad
             });
+            alert("¡Agregado al carrito con éxito!");
         } else {
             console.warn("agregarAlCarrito no está definida");
         }
 
-        const total = cantidad * precioUnitario;
-
-        if (inputTotal) {
-            inputTotal.value = "S/ " + total.toFixed(2);
-        }
+        actualizarTotalSalados();
     });
 }
