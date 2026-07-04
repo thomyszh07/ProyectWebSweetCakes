@@ -12,6 +12,10 @@ function guardarCarrito(carrito) {
     localStorage.setItem("carritoSweetCakes", JSON.stringify(carrito));
 }
 
+function vaciarCarrito() {
+    localStorage.removeItem("carritoSweetCakes");
+}
+
 function agregarAlCarrito(item) {
     const carrito = obtenerCarrito();
     const existente = carrito.find(p => p.id === item.id && p.tipo === item.tipo);
@@ -88,39 +92,12 @@ function renderizarCarrito() {
 
 document.addEventListener("DOMContentLoaded", renderizarCarrito);
 
-//PARTE DE BUSQUEDA
-
-document.addEventListener("DOMContentLoaded", () => {
-    const buscadores = document.querySelectorAll('input[placeholder*="Buscar"]');
-    const tarjetas = document.querySelectorAll(".tarjeta-postre, .tarjeta-salada");
-
-    console.log("¡JavaScript cargado con éxito!");
-    console.log(`Buscadores detectados: ${buscadores.length}`);
-    console.log(`Tarjetas detectadas: ${tarjetas.length}`);
-
-    if (buscadores.length === 0) return;
-
-    buscadores.forEach((buscador) => {
-        buscador.addEventListener("input", (evento) => {
-            const textoUsuario = evento.target.value.toLowerCase().trim();
-
-            buscadores.forEach(b => {
-                if (b !== evento.target) b.value = evento.target.value;
-            });
-
-            tarjetas.forEach((tarjeta) => {
-                const elementoNombre = tarjeta.querySelector(".nombre-postre, .nombre-salada");
-                
-                if (elementoNombre) {
-                    const nombreTexto = elementoNombre.textContent.toLowerCase();
-                    
-                    if (nombreTexto.includes(textoUsuario)) {
-                        tarjeta.style.display = ""; // Muestra
-                    } else {
-                        tarjeta.style.display = "none"; // Oculta
-                    }
-                }
-            });
-        });
-    });
+// Vuelve a pintar el carrito si la página se restaura desde el
+// caché del navegador (por ejemplo, al usar el botón "Atrás"
+// después de pagar). Sin esto, podría mostrarse una versión
+// "congelada" de la página con el carrito desactualizado.
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+        renderizarCarrito();
+    }
 });

@@ -7,11 +7,131 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+
+    <style>
+        /* ====== Efecto de fondo desenfocado al mostrar la boleta ====== */
+        #checkout-principal.fondo-desenfocado {
+            filter: blur(10px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        #overlay-boleta {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            padding: 20px;
+            filter: none !important;
+        }
+
+        #overlay-boleta.activo {
+            display: flex;
+        }
+
+        .boleta-modal {
+            background: #ffffff !important;
+            filter: none !important;
+            border-radius: 16px;
+            max-width: 420px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 28px 26px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.45);
+            text-align: center;
+            animation: aparecerBoleta 0.25s ease;
+        }
+
+        @keyframes aparecerBoleta {
+            from { opacity: 0; transform: translateY(10px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .boleta-modal h1 {
+            font-family: var(--fuente-titulo);
+            color: var(--color-cereza);
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .boleta-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.9rem;
+            text-align: left;
+            margin: 14px 0;
+        }
+
+        .boleta-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .boleta-item small {
+            color: var(--color-texto-suave);
+            display: block;
+        }
+    </style>
+
     <script>
         function procesarPago(event) {
             event.preventDefault();
-            document.getElementById('checkout-principal').style.display = 'none';
-            document.getElementById('pantalla-gracias').style.display = 'flex';
+            mostrarBoleta();
+        }
+
+        function mostrarBoleta() {
+            const carrito = (typeof obtenerCarrito === "function") ? obtenerCarrito() : [];
+            const contenedor = document.getElementById("boleta-items");
+            contenedor.innerHTML = "";
+
+            let subtotal = 0;
+
+            if (carrito.length === 0) {
+                contenedor.innerHTML = "<p style='text-align:center; color:var(--color-texto-suave);'>No hay productos registrados.</p>";
+            } else {
+                carrito.forEach(item => {
+                    const totalItem = item.precio * item.cantidad;
+                    subtotal += totalItem;
+
+                    contenedor.innerHTML += `
+                        <div class="boleta-item">
+                            <span>
+                                ${item.nombre}
+                                <small>${item.tipo} × ${item.cantidad}</small>
+                            </span>
+                            <span>S/ ${totalItem.toFixed(2)}</span>
+                        </div>
+                    `;
+                });
+            }
+
+            const envio = carrito.length > 0 ? 10 : 0;
+            const total = subtotal + envio;
+
+            document.getElementById("boleta-subtotal").textContent = "S/ " + subtotal.toFixed(2);
+            document.getElementById("boleta-envio").textContent = "S/ " + envio.toFixed(2);
+            document.getElementById("boleta-total").textContent = "S/ " + total.toFixed(2);
+
+            // Desenfoca el fondo y muestra el modal
+            document.getElementById("checkout-principal").classList.add("fondo-desenfocado");
+            document.getElementById("overlay-boleta").classList.add("activo");
+
+            // Vacía el carrito ya que la compra se completó
+            if (typeof vaciarCarrito === "function") {
+                vaciarCarrito();
+            }
+        }
+
+        function cerrarBoletaEIrInicio() {
+            window.location.href = "../index.html";
         }
     </script>
 </head>
@@ -138,35 +258,50 @@
 
     </div>
 
-    <!-- ====== PANTALLA DE AGRADECIMIENTO ====== -->
-    <div id="pantalla-gracias" class="pantalla-gracias" style="display:none; flex-direction:column; align-items:center;">
-        <h1>🎉 ¡Gracias por tu compra!</h1>
-        <p style="color:var(--color-texto-suave); max-width:480px; margin-top:8px;">
-            Tu pedido en <strong>Sweet Cakes</strong> fue procesado con éxito.
-            En breve nos comunicaremos contigo por WhatsApp para coordinar la entrega.
-        </p>
-        <!-- Columna derecha: resumen -->
-                <div class="resumen-compra">
-                    <h3 style="font-family:var(--fuente-titulo); color:var(--color-cereza); margin-bottom:14px;">Tu Pedido</h3>
-                    <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin-bottom:14px;">
-                    <div style="display:flex; flex-direction:column; gap:8px; font-size:0.9rem;">
-                        <div style="display:flex; justify-content:space-between;"><span>pedido1</span><span>S/ 0.00</span></div>
-                        <div style="display:flex; justify-content:space-between;"><span>pedido2 </span><span>S/ .00</span></div>
-                        <div style="display:flex; justify-content:space-between;"><span>pedido3</span><span>S/ 0.00</span></div>
-                    </div>
-                    <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:12px 0;">
-                    <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px;"><span>Subtotal</span><span>S/ 105.00</span></div>
-                    <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:12px 0;">
-                    <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1rem; color:var(--color-cereza);"><span>Total</span><span>S/ 115.00</span></div>
-                    <p style="font-size:0.75rem; color:var(--color-texto-suave); margin-top:14px; text-align:center;">@SweetCakes · Lima, Perú</p>
-                </div>
+    <!-- ====== MODAL DE BOLETA (aparece encima, con fondo desenfocado) ====== -->
+    <div id="overlay-boleta">
+        <div class="boleta-modal">
+            <h1>🎉 ¡Gracias por tu compra!</h1>
+            <p style="color:var(--color-texto-suave); font-size:0.88rem;">
+                Tu pedido en <strong>Sweet Cakes</strong> fue procesado con éxito.
+                En breve nos comunicaremos contigo por WhatsApp para coordinar la entrega.
+            </p>
 
+            <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:16px 0;">
 
+            <h3 style="font-family:var(--fuente-titulo); color:var(--color-cereza); text-align:left; margin-bottom:10px;">Tu Boleta</h3>
+
+            <div id="boleta-items" class="boleta-lista">
+                <!-- Los productos se llenan automáticamente con JS -->
+            </div>
+
+            <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:12px 0;">
+
+            <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px;">
+                <span>Subtotal</span><span id="boleta-subtotal">S/ 0.00</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px;">
+                <span>Envío</span><span id="boleta-envio">S/ 0.00</span>
+            </div>
+
+            <hr style="border:none; border-top:1px solid var(--color-rosa-claro); margin:12px 0;">
+
+            <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.05rem; color:var(--color-cereza); margin-bottom:18px;">
+                <span>Total</span><span id="boleta-total">S/ 0.00</span>
+            </div>
+
+            <button type="button" class="btn-confirmar" style="width:100%;" onclick="cerrarBoletaEIrInicio()">Volver al Inicio</button>
+
+            <p style="font-size:0.75rem; color:var(--color-texto-suave); margin-top:14px;">@SweetCakes · Lima, Perú</p>
+        </div>
+    </div>
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
         <p>© 2026 Sweet Cakes · Lima, Perú</p>
     </footer>
+
+    <script src="../script/carrito.js"></script>
 
 </body>
 </html>
