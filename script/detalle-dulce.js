@@ -17,7 +17,7 @@ const postres = {
     },
     3:{
         nombre:"PIE DE LIMÓN",
-        imagen:"../assets/imagenes/dulces/pie_pedido.jpg",
+        imagen:"../assets/imagenes/dulces/pielimon.jpg",
         descripcion:"El pie de limón es un postre clásico que combina una base crujiente de masa o galleta con un relleno cremoso y cítrico a base de limón, coronado por una capa suave de merengue tostado.",
         porcion:8,
         completo:68

@@ -136,7 +136,7 @@ if (btnAgregar && producto) {
                 precio: precioUnitario,
                 cantidad: cantidad
             });
-            alert("¡Agregado al carrito con éxito!");
+            
         } else {
             console.warn("agregarAlCarrito no está definida");
         }
