@@ -4,21 +4,21 @@ const salados = {
     1: {
         nombre: "EMPANADAS JAMÓN Y QUESO",
         imagen: "../assets/imagenes/salados/jamonadayqueso0.png",
-        descripcion: "Empanadas artesanales rellenas de jamón y queso derretido.",
+        descripcion: "Empanadas artesanales rellenas de jamón frances y queso cheedar amarillo derretido.",
         docena: 20
     },
 
     2: {
-        nombre: "PIZZA",
-        imagen: "../assets/imagenes/salados/pizza.png",
-        descripcion: "Pizza artesanal con queso, tomate y orégano.",
+        nombre: "TEQUEÑOS DE QUESO ",
+        imagen: "../assets/imagenes/salados/tequenos1.webp",
+        descripcion: "Los tequeños son un popular aperitivo frito hecho con un bastón de queso blanco envuelto en masa. Son crujientes por fuera, suaves por dentro y el piqueo infaltable en fiestas y reuniones de Sudamérica.",
         completo: 45
     },
 
     3: {
         nombre: "PITIPAN",
         imagen: "../assets/imagenes/salados/pititipam.png",
-        descripcion: "Mini panes rellenos de pollo con mayonesa y lechuga.",
+        descripcion: "Los pitipanes son pequeños panes redondos y suaves, con un toque ligeramente dulce, muy populares en el Perú. Son el bocadito salado por excelencia en cumpleaños, reuniones de trabajo y fiestas infantiles.",
         docena: 20
     },
 
@@ -32,14 +32,14 @@ const salados = {
     5: {
         nombre: "CROISSANTS",
         imagen: "../assets/imagenes/salados/cuernitos.png",
-        descripcion: "Croissants de mantequilla dorados y suaves.",
+        descripcion: "El croissant (o cruasán) es un pan de hojaldre con forma de medialuna, famoso por su textura crujiente por fuera y su interior alveolado y suave.",
         docena: 40
     },
 
     6: {
         nombre: "EMPANADAS",
-        imagen: "../assets/imagenes/salados/empanadas.png",
-        descripcion: "Empanadas rellenas de carne sazonada.",
+        imagen: "../assets/imagenes/salados/empanadas2.webp",
+        descripcion: "Las empanadas son un bocado hecho de masa fina relleno con un guiso salado o dulce, que se cocina al horno o frito.",
         docena: 30
     },
 
