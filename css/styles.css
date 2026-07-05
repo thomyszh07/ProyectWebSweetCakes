@@ -285,8 +285,7 @@ body.carta h1 {
 .boton-ver { padding:6px 20px; font-size:.78rem; background:var(--cereza); color:var(--blanco); }
 .boton-ver:hover { background:var(--cereza-dark); }
 
-/* Botón volver en las cartas */
-body.carta nav { display:flex; justify-content:center; margin:10px 0 30px; }
+
 
 /* === 7. PEDIDO / DETALLE ======================================= */
 .pedido-postre { background:var(--fondo); padding:20px; }
