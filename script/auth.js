@@ -38,12 +38,14 @@ function inicializarMenuUsuario(){
     }
 
     if(cerrarSesion){
-        cerrarSesion.addEventListener("click",()=>{
-            localStorage.removeItem("sesion");
-            localStorage.removeItem("usuario");
-            window.location.href="../index.html";
-        });
-    }
+    cerrarSesion.addEventListener("click",()=>{
+        localStorage.removeItem("sesion");
+        localStorage.removeItem("usuario");
+
+        const estaEnPages = window.location.pathname.includes("/pages/");
+        window.location.href = estaEnPages ? "../index.html" : "index.html";
+    });
+}
 }
 
 document.addEventListener("click",(e)=>{
