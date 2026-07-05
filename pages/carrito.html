@@ -10,7 +10,6 @@
 </head>
 <body>
 
-    <!-- ====== NAVEGACIÓN ====== -->
     <header>
         <nav>
             <span class="nav-logo"> 
@@ -25,58 +24,55 @@
         </nav>
     </header>
 
-    <!-- ====== CONTENIDO DEL CARRITO ====== -->
     <div class="carrito-wrapper">
 
-        <!-- Columna principal: tabla de productos -->
         <div style="flex:1; display:flex; flex-direction:column; gap:24px;">
 
             <h2 style="font-family:var(--fuente-titulo); color:var(--color-cereza); font-size:1.5rem;">
                 Tu Carrito de Compras de hoy
             </h2>
 
-        <!-- Tabla de ítems -->
-     <table class="tabla-carrito">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Total</th>
-                </tr>
+            <table class="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
                 </thead>
                 <tbody id="cuerpo-carrito">
                 </tbody>
-    </table>
-      <p class="total"><span>Total</span><span id="resumen-total">S/ 0.00</span></p>
+            </table>
+            
+            <p class="total"><span>Total</span><span id="resumen-total">S/ 0.00</span></p>
+            
+            <p style="margin: -10px 0 10px; font-size: 0.88rem; color: var(--color-texto-suave); font-style: italic; text-align: right;">
+                * Se adicionará S/ 10.00 por concepto de envío en el siguiente paso.
+            </p>
+
             <button onclick="window.location.href='checkout.html'">Proceder al Pago</button>
             <button onclick="window.location.href='../index.html'" style="background:transparent; color:var(--color-cereza); border:1.5px solid var(--color-cereza);">Seguir Comprando</button>
         </div>
 
-
-            <!-- Recomendados -->
-            <div style="background:var(--color-blanco); border:1.5px solid var(--color-rosa-claro); border-radius:var(--radio-card); padding:18px; box-shadow:var(--sombra-card);">
-                <p style="font-weight:700; margin-bottom:14px; color:var(--color-texto-suave); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">También te puede gustar</p>
-                <div style="display:flex; gap:20px; flex-wrap:wrap;">
-                    <div style="text-align:center;">
-                        <img src="../assets/imagenes/salados/triple.png" alt="Triple" width="70" style="border-radius:8px; margin:0 auto;">
-                        <small style="display:block; margin-top:6px; font-weight:700;">Triple</small>
-                        <small style="color:var(--color-cereza)">S/ 10.00</small>
-                    </div>
-                    <div style="text-align:center;">
-                        <img src="../assets/imagenes/dulces/tortamaracuya.png" alt="Maracuyá" width="70" style="border-radius:8px; margin:0 auto;">
-                        <small style="display:block; margin-top:6px; font-weight:700;">Pastel de Maracuyá</small>
-                        <small style="color:var(--color-cereza)">S/ 38.00</small>
-                    </div>
+        <div style="background:var(--color-blanco); border:1.5px solid var(--color-rosa-claro); border-radius:var(--radio-card); padding:18px; box-shadow:var(--sombra-card);">
+            <p style="font-weight:700; margin-bottom:14px; color:var(--color-texto-suave); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">También te puede gustar</p>
+            <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                <div style="text-align:center;">
+                    <img src="../assets/imagenes/salados/triple.png" alt="Triple" width="70" style="border-radius:8px; margin:0 auto;">
+                    <small style="display:block; margin-top:6px; font-weight:700;">Triple</small>
+                    <small style="color:var(--color-cereza)">S/ 10.00</small>
+                </div>
+                <div style="text-align:center;">
+                    <img src="../assets/imagenes/dulces/tortamaracuya.png" alt="Maracuyá" width="70" style="border-radius:8px; margin:0 auto;">
+                    <small style="display:block; margin-top:6px; font-weight:700;">Pastel de Maracuyá</small>
+                    <small style="color:var(--color-cereza)">S/ 38.00</small>
                 </div>
             </div>
-
         </div>
 
-        
     </div>
 
-    <!-- ====== PIE DE PÁGINA ====== -->
     <footer class="footer">
         <p>© 2026 Sweet Cakes · Lima, Perú</p>
     </footer>
